@@ -1,30 +1,30 @@
 # Repositório para exercícios e Projetos da trybe
 
-### Fundamentos do Desenvolvimento Web
+## Fundamentos do Desenvolvimento Web
 
-Bloco 01: Unix & Bash
-Bloco 02: Git, GitHub e Internet
-Bloco 03: Introdução à HTML e CSS
-Bloco 04: Introdução à JavaScript e Lógica de Programação
-Bloco 05: JavaScript: DOM, Eventos e Web Storage
-Bloco 06: HTML e CSS: Forms, Flexbox e Responsivo
-Bloco 07: Introdução à JavaScript ES6 e Testes Unitários
-Bloco 08: Higher Order Functions do JavaScript ES6
+- [ ] Bloco 01: Unix & Bash
+- [ ] Bloco 02: Git, GitHub e Internet
+- [ ] Bloco 03: Introdução à HTML e CSS
+- [ ] Bloco 04: Introdução à JavaScript e Lógica de Programação
+- [ ] Bloco 05: JavaScript: DOM, Eventos e Web Storage
+- [ ] Bloco 06: HTML e CSS: Forms, Flexbox e Responsivo
+- [ ] Bloco 07: Introdução à JavaScript ES6 e Testes Unitários
+- [ ] Bloco 08: Higher Order Functions do JavaScript ES6
 ##
-### Desenvolvimento Front-end
+## Desenvolvimento Front-end
 
-Bloco 09: JavaScript e Testes Assíncronos
-Bloco 10: Introdução à React
-Bloco 11: Componentes com Estado, Eventos e Formulários com React
-Bloco 12: Ciclo de Vida de Componentes e React Router
-Bloco 13: Metodologias Ágeis
-Bloco 14: Testes automatizados com React Testing Library
-Bloco 15: Gerenciamento de estado com Redux
-Bloco 16: Projeto Jogo de Trivia
-Bloco 17: Context API e React Hooks
-Bloco 18: Projeto App de Receitas
+- [ ] Bloco 09: JavaScript e Testes Assíncronos
+- [ ] Bloco 10: Introdução à React
+- [ ] Bloco 11: Componentes com Estado, Eventos e Formulários com React
+- [ ] Bloco 12: Ciclo de Vida de Componentes e React Router
+- [ ] Bloco 13: Metodologias Ágeis
+- [ ] Bloco 14: Testes automatizados com React Testing Library
+- [ ] Bloco 15: Gerenciamento de estado com Redux
+- [ ] Bloco 16: Projeto Jogo de Trivia
+- [ ] Bloco 17: Context API e React Hooks
+- [ ] Bloco 18: Projeto App de Receitas
 ##
-### Desenvolvimento Back-end
+## Desenvolvimento Back-end
 
 Bloco 19: Docker: Utilizando Containers
 Bloco 20: Introdução à SQL
@@ -41,7 +41,7 @@ Bloco 30: MongoDB com Node.js e POO
 Bloco 31: Projeto - App de Delivery
 Bloco 32: MasterClass - VPS, CI/CD
 ##
-### Ciência da Computação
+## Ciência da Computação
 
 Bloco 33: Introdução à Python
 Bloco 34: Padrões de Projeto
