@@ -2,8 +2,8 @@
 
 ## Fundamentos do Desenvolvimento Web
 
-- [ ] Bloco 01: Unix & Bash
-- [ ] Bloco 02: Git, GitHub e Internet
+- [X] Bloco 01: Unix & Bash
+- [X] Bloco 02: Git, GitHub e Internet
 - [ ] Bloco 03: Introdução à HTML e CSS
 - [ ] Bloco 04: Introdução à JavaScript e Lógica de Programação
 - [ ] Bloco 05: JavaScript: DOM, Eventos e Web Storage
@@ -26,28 +26,28 @@
 ##
 ## Desenvolvimento Back-end
 
-Bloco 19: Docker: Utilizando Containers
-Bloco 20: Introdução à SQL
-Bloco 21: Funções SQL, JOINs e Normalização
-Bloco 22: Introdução ao desenvolvimento Web com Node.js
-Bloco 23: Node.js: Camada de Serviço e Arquitetura Rest e Restful
-Bloco 24: Node.js: ORM e Autenticação
-Bloco 25: Deployment
-Bloco 26: TypeScript
-Bloco 27: Programação Orientada a Objetos (POO) e SOLID
-Bloco 28: Projeto - TFC - Trybe Futebol Clube
-Bloco 29: Introdução ao MongoDB
-Bloco 30: MongoDB com Node.js e POO
-Bloco 31: Projeto - App de Delivery
-Bloco 32: MasterClass - VPS, CI/CD
+- [ ] Bloco 19: Docker: Utilizando Containers
+- [ ] Bloco 20: Introdução à SQL
+- [ ] Bloco 21: Funções SQL, JOINs e Normalização
+- [ ] Bloco 22: Introdução ao desenvolvimento Web com Node.js
+- [ ] Bloco 23: Node.js: Camada de Serviço e Arquitetura Rest e Restful
+- [ ] Bloco 24: Node.js: ORM e Autenticação
+- [ ] Bloco 25: Deployment
+- [ ] Bloco 26: TypeScript
+- [ ] Bloco 27: Programação Orientada a Objetos (POO) e SOLID
+- [ ] Bloco 28: Projeto - TFC - Trybe Futebol Clube
+- [ ] Bloco 29: Introdução ao MongoDB
+- [ ] Bloco 30: MongoDB com Node.js e POO
+- [ ] Bloco 31: Projeto - App de Delivery
+- [ ] Bloco 32: MasterClass - VPS, CI/CD
 ##
 ## Ciência da Computação
 
-Bloco 33: Introdução à Python
-Bloco 34: Padrões de Projeto
-Bloco 35: Redes e Raspagem de Dados
-Bloco 36: Algoritmos
-Bloco 37: Estrutura de Dados I: Arrays, Hashmaps e Sets
-Bloco 38: Estrutura de Dados II: Listas, Filas e Pilhas
+- [ ] Bloco 33: Introdução à Python
+- [ ] Bloco 34: Padrões de Projeto
+- [ ] Bloco 35: Redes e Raspagem de Dados
+- [ ] Bloco 36: Algoritmos
+- [ ] Bloco 37: Estrutura de Dados I: Arrays, Hashmaps e Sets
+- [ ] Bloco 38: Estrutura de Dados II: Listas, Filas e Pilhas
 
 ##
