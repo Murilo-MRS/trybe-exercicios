@@ -1,3 +1,3 @@
 # Fundamentos do Desenvolvimento Web
 
-#### Nosso primeiro módulo te ensinará tudo que você precisa saber para iniciar sua carreira no mundo do desenvolvimento Web, virando uma pessoa preparada para os módulos de front-end e back-end. Vamos te guiar, etapa a etapa, por toda essa jornada!
+#### Nesse primeiro módulo aprendemos como iniciar na carreira do desenvolvimento web. Começamos estudando sobre o S.O. chamado UNIX e aprendemos a utilizar os comandos no terminal. Aprendemos a utilizar a ferramenta de versionamento de código o GIT. Também aprendemos a desenvolver páginas web com as linguagens HTML, CSS e Javascript. Após esse ciclo de aprendizado, criamos páginas web responsivas com CSS. E como utilizar o JavaScript em sua plenitude, utilizando recursos avançados como HOF, Código assíncrono, Testes unitários entre outras coisas incríveis!
