@@ -1,0 +1,8 @@
+Internet
+Unix
+Bash
+Trybe
+Desenvolvedor web
+web
+front-end
+Back-end

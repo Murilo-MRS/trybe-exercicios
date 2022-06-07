@@ -1,0 +1,6 @@
+cachorro
+elefante
+gato
+Girafa
+macaco
+Urubu
