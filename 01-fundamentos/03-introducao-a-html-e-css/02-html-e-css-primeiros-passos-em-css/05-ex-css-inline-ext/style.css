@@ -1,0 +1,32 @@
+
+      h2 {
+        color: green;
+        font-size: 2em; 
+      }
+      /* 'em' - quando uso essa unidade de medida no body, quer dizer que o texto em h2 será 2x maior que definido em body */
+      body {
+          background-color: rgb(255, 400, 200);
+          font-size: 20px;
+      }
+
+      p {
+        font-family: fantasy, sans-serif;
+      }
+
+      #extinct-specie {
+          background-color: red;
+      }
+
+      #description {
+          color: orange;
+      }
+
+      .list-style {
+          background-color: blue;
+          color: white;
+          font-weight: bold;
+          font-style: italic;
+          line-height: 40px;
+          text-align: center;
+          text-decoration: underline;
+      } 
