@@ -1,0 +1,16 @@
+h1, p {
+    text-align: center;
+}
+
+li {
+    list-style: none;
+}
+
+ul:hover , ol:hover{
+    background-color: aquamarine;
+}
+
+li:active {
+    font-family: sans-serif, Verdana;
+    font-size: italic;
+}

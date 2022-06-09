@@ -1,0 +1,53 @@
+/* 1 - Faça com que todos os itens de Listas Ordenadas tenham uma cor de fundo amarela. par verde e impar maiuscula */
+ol li {
+    background-color: yellow;
+}
+ol li:nth-of-type(2n) {
+    color: green;
+}
+ol li:nth-of-type(2n+1) {
+    text-transform: uppercase;
+}
+/* 2 - Faça todas as tags Header (h1, h2...) possuírem cor de fonte vermelha e, se alguma delas estiver em itálico */
+h1, h2, h3 {
+    color: red;
+}
+h1 em, h2 em, h3 em{
+    font-size: 40px;
+}
+/* 3 - Faça todas as li's terem 20px de tamanho de fonte e, para todo texto em itálico dentro de alguma li, utilize a propriedade font-weight para deixá-lo negrito. */
+li {
+    font-size: 20px;
+}
+
+li em {
+    font-weight: bold;
+}
+/* 4 - Na listagem de linguagens de programação, faça com que as 3 primeiras da lista possuam cor de fonte azul e, se alguma possuir "java*" no texto, utilize uma cor de fundo rosa. */
+ul:nth-of-type(1) li:nth-of-type(-n+3) {
+    color: blue;
+}
+
+.bg-pink {
+    background-color: pink;
+}
+/* 5 - (Bônus) Para cada link na lista de aliados da pessoa desenvolvedora, faça com que ao passar o mouse sobre cada um, o texto fique em negrito e assuma a cor de fonte "temática do site" */
+#aliados li a:hover {
+    font-weight: 700;
+}
+
+.stack {
+    color: orange;
+}
+.w3 {
+    color: green;
+}
+.mdn {
+    color: darkgrey;
+}
+.devdocs {
+    color: yellow;
+}
+.trybe {
+    color: lime;
+}

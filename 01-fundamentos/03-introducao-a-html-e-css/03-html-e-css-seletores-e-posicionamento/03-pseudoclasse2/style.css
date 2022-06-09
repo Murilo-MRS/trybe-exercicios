@@ -1,0 +1,73 @@
+/* 1 - Estilize as divs para que, ao passar o cursor por cima das mesmas, elas ganhem uma borda. */
+div:hover {
+    border: 2px solid black;
+}
+
+/* 2 - Faça cada div ter uma cor própria.  pode se usar div:nth-of-type(numero em order cima p baixo)*/
+/* .primaria {
+    color: #EF6461;
+}
+
+.secundaria {
+    color: #E4B363;
+}
+
+.complementar {
+    color: #E0DFD5;
+}
+
+.escura {
+    color: #313638;
+}
+
+.clara {
+    color: #E8E9EB;
+} */
+
+div:nth-of-type(1) {
+    background-color: #EF6461;
+}
+
+div:nth-of-type(2) {
+    background-color: #E4B363;
+}
+
+div:nth-of-type(3) {
+    background-color: #E0DFD5;
+    height: 90px;
+}
+
+div:nth-of-type(4) {
+    background-color: #313638;
+}
+
+div:nth-of-type(5) {
+    background-color: #E8E9EB;
+}
+
+/* 3 - Estilize cada uma das tags h3. */
+div:nth-of-type(1) > h3 {
+    color: #E4B363;
+}
+
+div:nth-of-type(2) > h3 {
+    color: #EF6461;
+}
+
+div:nth-of-type(3) > h3 {
+    font-style: italic;
+}
+
+div:nth-of-type(4) > h3 {
+    color: #E8E9EB;
+}
+
+div:nth-of-type(5) > h3 {
+    color: #313638;
+}
+/* 4 - Faça a terceira div ser maior que as demais. */
+/* 5 - Deixe as tags ímpares h3 com o texto em itálico. */
+
+div:nth-of-type(2n+1) > h3 {
+    font-style: italic;
+}
