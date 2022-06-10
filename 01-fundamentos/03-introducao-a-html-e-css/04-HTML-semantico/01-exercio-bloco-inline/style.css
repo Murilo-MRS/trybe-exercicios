@@ -1,3 +1,4 @@
+
 h1 {
     text-align: center;
   }
@@ -8,6 +9,13 @@ h1 {
     height: 50px;
     text-align: center;
     width: 200px;
+    display: block;
+    margin:auto
+  }
+
+  .patamar {
+    display: block;
+    text-align: center;
   }
 
   .second {
@@ -16,6 +24,7 @@ h1 {
     height: 50px;
     text-align: center;
     width: 300px;
+    display: inline-block;
   }
 
   .third {
@@ -23,5 +32,16 @@ h1 {
     font-size: 20px;
     height: 50px;
     text-align: center;
+    display: inline-block;
     width: 300px;
   }
+
+  .prize {
+    text-align: center;
+  }
+
+  .prize ul li {
+    display: inline-block;
+  }
+
+  
