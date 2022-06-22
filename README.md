@@ -4,7 +4,7 @@
 
 - [X] Bloco 01: Unix & Bash
 - [X] Bloco 02: Git, GitHub e Internet
-- [ ] Bloco 03: Introdução à HTML e CSS
+- [X] Bloco 03: Introdução à HTML e CSS
 - [ ] Bloco 04: Introdução à JavaScript e Lógica de Programação
 - [ ] Bloco 05: JavaScript: DOM, Eventos e Web Storage
 - [ ] Bloco 06: HTML e CSS: Forms, Flexbox e Responsivo
