@@ -10,4 +10,4 @@ function menorIndice(numeros) {
 }
 
 
-console.log(menorIndice([2, 3, 6, 7, 10, 1]));
+console.log(menorIndice([2, 4, 6, 7, 10, 0, -3]));
