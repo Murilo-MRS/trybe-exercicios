@@ -29,3 +29,12 @@ function mudaTextoP() {
     }
 } 
 mudaTextoP();
+
+function showParagraphs() {
+    let paragraphs = document.getElementsByTagName('p');
+    for (const iterator of paragraphs) {
+      console.log(iterator.innerHTML);
+    }
+  }
+  showParagraphs();
+  
