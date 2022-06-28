@@ -17,7 +17,15 @@ function mudaCorCenter() {
 mudaCorCenter();
 
 function corrigeTexto() {
-    let mudaTexto = document.getElementsByClassName('title');
-    mudaTexto[0].innerText = "Exercício 5.1 - JavaEscripit";
+    let mudaTextoErrado = document.getElementsByClassName('title');
+    mudaTextoErrado[0].innerText = "Exercício 5.1 - JavaEscripit";
 } 
 corrigeTexto();
+
+function mudaTextoP() {
+    let mudaTextoMaisculo = document.querySelectorAll('p');
+    for (const iterator of mudaTextoMaisculo) {
+        iterator.style.textTransform = 'uppercase';
+    }
+} 
+mudaTextoP();
