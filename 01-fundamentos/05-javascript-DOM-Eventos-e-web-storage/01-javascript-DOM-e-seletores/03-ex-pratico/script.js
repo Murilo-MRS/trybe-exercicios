@@ -15,3 +15,9 @@ function mudaCorCenter() {
     mudaCor[0].style.backgroundColor = "rgb(255,255,255)";
 } 
 mudaCorCenter();
+
+function corrigeTexto() {
+    let mudaTexto = document.getElementsByClassName('title');
+    mudaTexto[0].innerText = "Exercício 5.1 - JavaEscripit";
+} 
+corrigeTexto();
