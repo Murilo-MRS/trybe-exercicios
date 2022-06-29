@@ -45,7 +45,7 @@ function exercicio3() {
   let criaElementoFilho = document.createElement("section");
   criaElementoFilho.innerHTML = "ELEMENTO FILHO do Filho CRIADO";
   acessaElementoOnde.appendChild(criaElementoFilho);
-  console.log(document.getElementById('primeiroFilhoDoFilho').lastElementChild);
+  console.log(document.getElementById('primeiroFilhoDoFilho').lastElementChild); // 4
 }
 exercicio3();
 
