@@ -83,8 +83,17 @@ function removeLeft() {
     let leftSection = document.querySelector('.left-content');
     mainPai.removeChild(leftSection);
 }
-removeLeft()
+removeLeft();
 
 
 // exercicio 6 parte - 2 
+function removeFilhoUl() {
+    let removeLi = document.querySelector("ul");
+    let ultimoItem1 = removeLi.lastChild;
+    removeLi.removeChild(ultimoItem1);
+    let removeLi2 = document.querySelector("ul");
+    let ultimoItem2 = removeLi2.lastChild;
+    removeLi2.removeChild(ultimoItem2);
+}
+removeFilhoUl();
 
