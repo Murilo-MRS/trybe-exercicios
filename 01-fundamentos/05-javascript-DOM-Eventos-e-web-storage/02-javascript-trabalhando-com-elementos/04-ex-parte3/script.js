@@ -11,7 +11,8 @@ for (let index = acessaPai.childNodes.length - 1; index >= 0; index -= 1) {
 console.log(acessaPai.childNodes);
 
 let elementoOnde = document.getElementById('elementoOndeVoceEsta');
-elementoOnde.removeChild('segundoEUltimoFilhoDoFilho')
+let d_nested = document.getElementById('segundoEUltimoFilhoDoFilho');
+elementoOnde.removeChild(d_nested)
 console.log(elementoOnde);
 
 // console.log(elementoOnde);
