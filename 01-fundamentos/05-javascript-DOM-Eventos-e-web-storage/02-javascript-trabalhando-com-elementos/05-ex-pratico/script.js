@@ -42,3 +42,12 @@ function exercicio6() {
 }
 exercicio6();
 
+function exercicio7() {
+    let sectionLeft = document.querySelector('.left-content');
+    let criaImg = document.createElement('img');
+    criaImg.src = 'https://picsum.photos/200';
+    criaImg.className = 'small-image';
+    sectionLeft.appendChild(criaImg);
+}
+exercicio7();
+
