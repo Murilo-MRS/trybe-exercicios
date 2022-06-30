@@ -50,7 +50,7 @@ function exercicio7() {
   criaImg.className = "small-image";
   sectionLeft.appendChild(criaImg);
 }
-exercicio7();
+exercicio7();// exercicio 4 parte - 2 
 
 function exercicio8() {
   let sectionRight = document.querySelector(".right-content");
@@ -77,7 +77,12 @@ exercicio9();
 
 
 // exercicio 3 parte - 2 
-// exercicio 4 parte - 2 
+function removeLeft() {
+    let leftSection = document.querySelector('.left-content');
+    mainPai.removeChild(leftSection);
+}
+removeLeft()
+
 // exercicio 5 parte - 2 
 // exercicio 6 parte - 2 
 
