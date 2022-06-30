@@ -39,9 +39,10 @@ exercicio5();
 function exercicio6() {
   let criaSection = document.createElement("section");
   criaSection.className = "right-content";
+  criaSection.style.marginRight = 'auto';
   mainPai.appendChild(criaSection);
 }
-exercicio6();
+exercicio6();// exercicio 4 parte - 2 
 
 function exercicio7() {
   let sectionLeft = document.querySelector(".left-content");
@@ -50,7 +51,7 @@ function exercicio7() {
   criaImg.className = "small-image";
   sectionLeft.appendChild(criaImg);
 }
-exercicio7();// exercicio 4 parte - 2 
+exercicio7();
 
 function exercicio8() {
   let sectionRight = document.querySelector(".right-content");
