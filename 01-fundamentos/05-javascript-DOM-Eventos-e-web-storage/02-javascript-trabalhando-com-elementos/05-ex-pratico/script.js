@@ -64,3 +64,11 @@ function exercicio8() {
   }
 }
 exercicio8();
+
+function exercicio9() {
+    for (let index = 0; index < 3; index += 1) {
+        let criaH3 = document.createElement('h3');
+        mainPai.appendChild(criaH3);
+    }
+}
+exercicio9();
