@@ -34,3 +34,11 @@ function exercicio5() {
     mainPai.appendChild(criaSection);
 }
 exercicio5();
+
+function exercicio6() {
+    let criaSection = document.createElement('section');
+    criaSection.className = 'right-content';
+    mainPai.appendChild(criaSection);
+}
+exercicio6();
+
