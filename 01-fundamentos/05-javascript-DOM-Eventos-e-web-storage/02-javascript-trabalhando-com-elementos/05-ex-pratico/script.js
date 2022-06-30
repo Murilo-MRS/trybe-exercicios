@@ -12,8 +12,8 @@ function exercicio2() {
 }
 exercicio2();
 
+let mainPai = document.querySelector('main');
 function exercicio3() {
-    let mainPai = document.querySelector('main');
     let criaSection = document.createElement('section');
     criaSection.className = 'center-content';
     mainPai.appendChild(criaSection);
@@ -30,6 +30,7 @@ exercicio4();
 
 function exercicio5() {
     let criaSection = document.createElement('section');
-
+    criaSection.className = 'left-content';
+    mainPai.appendChild(criaSection);
 }
 exercicio5();
