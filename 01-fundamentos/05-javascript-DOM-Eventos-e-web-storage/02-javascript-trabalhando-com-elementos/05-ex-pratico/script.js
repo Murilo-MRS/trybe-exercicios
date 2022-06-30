@@ -86,7 +86,7 @@ function removeLeft() {
 removeLeft();
 
 
-// exercicio 6 parte - 2 
+// exercicio 6 parte - 2 ou usar document.getElementsByTagName('ul')[0] depois remove()
 function removeFilhoUl() {
     let removeLi = document.querySelector("ul");
     let ultimoItem1 = removeLi.lastChild;
