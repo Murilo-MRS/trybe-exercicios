@@ -1,6 +1,7 @@
 function exercicio1() {
   let criaH1 = document.createElement("h1");
   criaH1.innerHTML = "Exercício 5.2 - JavaScript DOM";
+  criaH1.className = 'title'; // exercicio 1 parte - 2 
   document.body.appendChild(criaH1);
 }
 exercicio1();
@@ -72,3 +73,6 @@ function exercicio9() {
     }
 }
 exercicio9();
+
+// Parte 2
+
