@@ -17,6 +17,7 @@ let mainPai = document.querySelector("main");
 function exercicio3() {
   let criaSection = document.createElement("section");
   criaSection.className = "center-content";
+  criaSection.style.backgroundColor = 'limegreen';// exercicio 5 parte - 2 
   mainPai.appendChild(criaSection);
 }
 exercicio3();
@@ -39,10 +40,10 @@ exercicio5();
 function exercicio6() {
   let criaSection = document.createElement("section");
   criaSection.className = "right-content";
-  criaSection.style.marginRight = 'auto';
+  criaSection.style.marginRight = 'auto'; // exercicio 4 parte - 2 
   mainPai.appendChild(criaSection);
 }
-exercicio6();// exercicio 4 parte - 2 
+exercicio6();
 
 function exercicio7() {
   let sectionLeft = document.querySelector(".left-content");
@@ -84,6 +85,6 @@ function removeLeft() {
 }
 removeLeft()
 
-// exercicio 5 parte - 2 
+
 // exercicio 6 parte - 2 
 
