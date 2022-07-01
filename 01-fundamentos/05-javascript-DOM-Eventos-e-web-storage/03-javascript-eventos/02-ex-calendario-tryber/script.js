@@ -65,3 +65,7 @@ function btnFeriados(param) {
     buttonHolidayContainer.appendChild(buttonHoliday);
 }
 btnFeriados('Feriados');
+
+function changeColorHoliday(params) {
+    const buttonHoliday = getElementById('btn-holiday')
+}
