@@ -47,3 +47,12 @@ function verifiedHoliday() {
     }
 }
 verifiedHoliday();
+
+function verifiedFriday() {
+    const monthDays = document.getElementsByClassName("day");
+    for (let index = 5; index < monthDays.length; index += 7) {
+        let holiday = parseInt(monthDays[index].innerText);
+        monthDays[index].classList.add("friday");
+    }
+}
+verifiedFriday();
