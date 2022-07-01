@@ -51,8 +51,17 @@ verifiedHoliday();
 function verifiedFriday() {
     const monthDays = document.getElementsByClassName("day");
     for (let index = 5; index < monthDays.length; index += 7) {
-        let holiday = parseInt(monthDays[index].innerText);
         monthDays[index].classList.add("friday");
     }
 }
 verifiedFriday();
+
+function btnFeriados(param) {
+    const buttonHolidayContainer = document.querySelector('.buttons-container');
+    const buttonHoliday = document.createElement('button')
+    buttonHoliday.id = 'btn-holiday';
+    buttonHoliday.innerText = param;
+
+    buttonHolidayContainer.appendChild(buttonHoliday);
+}
+btnFeriados('Feriados');
