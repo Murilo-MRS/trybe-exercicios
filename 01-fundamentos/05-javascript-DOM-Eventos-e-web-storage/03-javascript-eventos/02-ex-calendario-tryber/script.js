@@ -124,3 +124,26 @@ function tasks(param) {
 
 }
 tasks('Cozinhar');
+
+function newTaskDiv(color) {
+
+  const tasksContainer = document.querySelector('.my-tasks');
+  const newTask = document.createElement('div');
+
+  newTask.className = 'task';
+  newTask.style.backgroundColor = color;
+  tasksContainer.appendChild(newTask); // Adiciona newTask como filho de tasksContainer
+};
+newTaskDiv('green');
+
+function taskSelected() {
+  let task = document.querySelector('.task');
+  task.addEventListener('click', function(e){
+    if (e.target.classList.length === 2) {
+      e.target.classList.remove('selected');
+    } else {
+      e.target.classList.add('selected');
+    }
+  })
+}
+taskSelected();
