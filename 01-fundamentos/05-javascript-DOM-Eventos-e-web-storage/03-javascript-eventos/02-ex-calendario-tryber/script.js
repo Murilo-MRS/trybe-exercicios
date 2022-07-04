@@ -102,3 +102,17 @@ function btnFriday (param) {
 }
 let decemberFridays = [ 4, 11, 18, 25 ];
 btnFriday ('Sexta-feira');
+
+function daysZoom() {
+  const daysUl = document.getElementById('days');
+  daysUl.addEventListener('mouseover', function(e){
+    e.target.style.fontSize = '30px';
+    e.target.style.transition = 'font-size .5s';
+  });
+  daysUl.addEventListener('mouseout', function(e){
+    e.target.style.fontSize = '20px';
+    e.target.style.transition = 'font-size .5s';
+  })
+}
+daysZoom();
+
