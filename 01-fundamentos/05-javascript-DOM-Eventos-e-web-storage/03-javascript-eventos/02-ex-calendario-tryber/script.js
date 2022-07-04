@@ -38,34 +38,54 @@ daysNum();
 
 function verifiedHoliday() {
   const monthDays = document.getElementsByClassName("day");
-    for (let index = 0; index < monthDays.length; index += 1) {
-        let holiday = parseInt(monthDays[index].innerText);
+  for (let index = 0; index < monthDays.length; index += 1) {
+    let holiday = parseInt(monthDays[index].innerText);
 
-        if ( holiday === 24 || holiday === 25 || holiday === 31) {
-            monthDays[index].classList.add("holiday");
-        }
+    if (holiday === 24 || holiday === 25 || holiday === 31) {
+      monthDays[index].classList.add("holiday");
     }
+  }
 }
 verifiedHoliday();
 
 function verifiedFriday() {
-    const monthDays = document.getElementsByClassName("day");
-    for (let index = 5; index < monthDays.length; index += 7) {
-        monthDays[index].classList.add("friday");
-    }
+  const monthDays = document.getElementsByClassName("day");
+  for (let index = 5; index < monthDays.length; index += 7) {
+    monthDays[index].classList.add("friday");
+  }
 }
 verifiedFriday();
 
 function btnFeriados(param) {
-    const buttonHolidayContainer = document.querySelector('.buttons-container');
-    const buttonHoliday = document.createElement('button')
-    buttonHoliday.id = 'btn-holiday';
-    buttonHoliday.innerText = param;
+  const buttonHolidayContainer = document.querySelector(".buttons-container");
+  const buttonHoliday = document.createElement("button");
+  buttonHoliday.id = "btn-holiday";
+  buttonHoliday.innerText = param;
+  let backgroundColor = 'rgb(238,238,238)';
+  let novaCor = 'white'
+  buttonHolidayContainer.appendChild(buttonHoliday);
 
-    buttonHolidayContainer.appendChild(buttonHoliday);
-}
-btnFeriados('Feriados');
 
-function changeColorHoliday(params) {
-    const buttonHoliday = getElementById('btn-holiday')
+  const holiday = document.querySelectorAll('.holiday');
+  
+  buttonHoliday.addEventListener('click', function () {
+    for (let index = 0; index < holiday.length; index += 1) {
+      if (holiday[index].style.backgroundColor === novaCor) {
+        holiday[index].style.backgroundColor = backgroundColor;
+      } else {
+        holiday[index].style.backgroundColor = novaCor;
+      }
+    }
+  });
 }
+btnFeriados("Feriados");
+
+function btnFriday (param) {
+  const btnContainer = document.querySelector('.buttons-container');
+  const buttonFriday = document.createElement('button');
+  buttonFriday.id = 'btn-friday';
+  buttonFriday.innerText = param;
+  btnContainer.appendChild(buttonFriday);
+
+}
+btnFriday ('Sexta-feira');
