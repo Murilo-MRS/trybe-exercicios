@@ -62,7 +62,7 @@ function btnFeriados(param) {
   buttonHoliday.id = "btn-holiday";
   buttonHoliday.innerText = param;
   let backgroundColor = 'rgb(238,238,238)';
-  let novaCor = 'white'
+  let novaCor = 'lime'
   buttonHolidayContainer.appendChild(buttonHoliday);
 
 
@@ -116,3 +116,11 @@ function daysZoom() {
 }
 daysZoom();
 
+function tasks(param) {
+  const tasksContainer = document.querySelector('.my-tasks');
+  const task = document.createElement('span');
+  task.innerHTML= param;
+  tasksContainer.appendChild(task);
+
+}
+tasks('Cozinhar');
