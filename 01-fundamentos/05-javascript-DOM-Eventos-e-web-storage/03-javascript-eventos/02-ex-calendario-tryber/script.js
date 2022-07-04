@@ -147,3 +147,50 @@ function taskSelected() {
   })
 }
 taskSelected();
+
+function colorSelected() {
+  const taskSelected = document.getElementsByClassName('task selected');
+  const task = document.querySelector('.task');
+  const daysUl = document.getElementById('days');
+  let taskColor = task.style.backgroundColor;
+  daysUl.addEventListener('click', function(e) {
+    let eventTargetColor = e.target.style.color;
+    if (taskSelected.length > 0 && eventTargetColor !== taskColor) {
+      let color = taskSelected[0].style.backgroundColor;
+      e.target.style.color = color;
+    } else if (eventTargetColor === taskColor){
+      e.target.style.color = 'rgb(119,119,119)';
+    }
+  });
+}
+colorSelected();
+
+function addNewTask() {
+  let getInputField = document.querySelector('#task-input');
+  let addInputButton = document.querySelector('#btn-add');
+  let getTaskList = document.querySelector('.task-list');
+
+  addInputButton.addEventListener('click', function() {
+    if (getInputField.value.length > 0) {
+      let newLi = document.createElement('li');
+      newLi.innerText = getInputField.value;
+
+      getTaskList.appendChild(newLi);
+      getInputField.value = '';
+    } else {
+      alert('Error: Digite ao menos 1 caractere.');
+    }
+  });
+
+  getInputField.addEventListener('keyup', function(event) {
+    if (event.key === 'Enter' && getInputField.value.length > 0) {
+      let newLi = document.createElement('li');
+      newLi.innerText = getInputField.value;
+
+      getTaskList.appendChild(newLi);
+      getInputField.value = '';
+    }
+  });
+}
+
+addNewTask();
