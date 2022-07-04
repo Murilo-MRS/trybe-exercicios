@@ -87,5 +87,18 @@ function btnFriday (param) {
   buttonFriday.innerText = param;
   btnContainer.appendChild(buttonFriday);
 
+  const friday = document.querySelectorAll('.friday');
+
+  buttonFriday.addEventListener('click', function() {
+    for (let index = 0; index < friday.length; index += 1) {
+      if (friday[index].innerText === 'sextou') {
+        friday[index].innerText = decemberFridays[index];
+      } else {
+        friday[index].innerText = 'sextou';
+      }
+    }
+  })
+
 }
+let decemberFridays = [ 4, 11, 18, 25 ];
 btnFriday ('Sexta-feira');
