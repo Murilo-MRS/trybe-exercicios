@@ -8,3 +8,5 @@ function clicaLink (e) {
 }
 
 HREF_LINK.addEventListener('click', clicaLink)
+INPUT_TEXT.addEventListener('keypress', clicaLink)
+INPUT_CHECKBOX.addEventListener('click', clicaLink)
