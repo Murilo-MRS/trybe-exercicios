@@ -9,38 +9,59 @@
 </head>
 <body>
     <header id="cabecalho">
-        <h1>TRYBETRIP</h1>
+        <div class="title">
+            <h1>TRYBETRIP</h1>
+            <p></p>
+        </div>
         <form action="" method="get">
             <div class="dados-container">
-                <label for="input-name">Nome:</label>
-                <input type="text" name="name" maxlength="40" minlength="10" id="input-name" required>
-                <label for="input-email">Email:</label>
-                <input type="email" name="email" maxlength="50" minlength="10" id="input-email" required>
+                <fieldset>
+                    <legend>Dados Pessoais</legend>
+                    <label for="input-name">Nome:</label>
+                    <input type="text" name="name" maxlength="40" minlength="10" id="input-name" required>
+                    <label for="input-email">Email:</label>
+                    <input type="email" name="email" maxlength="50" minlength="10" id="input-email" required>
+                </fieldset>
             </div>
             <div class="radio-container">
-                <input type="radio" name="opcao" class="input-radio" id="opcao-1">
-                <label for="opcao-1">Cidade</label>
-                <input type="radio" name="opcao" class="input-radio" id="opcao-2">
-                <label for="opcao-2">Campo</label>
-                <input type="radio" name="opcao" class="input-radio" id="opcao-3">
-                <label for="opcao-3">Praia</label>
-                <input type="radio" name="opcao" class="input-radio" id="opcao-4">
-                <label for="opcao-4">Montanhas</label>
+                <fieldset>
+                    <legend>Destino</legend>
+                    <input type="radio" name="opcao" class="input-radio" id="opcao-1">
+                    <label for="opcao-1">Cidade</label>
+                    <input type="radio" name="opcao" class="input-radio" id="opcao-2">
+                    <label for="opcao-2">Campo</label>
+                    <input type="radio" name="opcao" class="input-radio" id="opcao-3">
+                    <label for="opcao-3">Praia</label>
+                    <input type="radio" name="opcao" class="input-radio" id="opcao-4">
+                    <label for="opcao-4">Montanhas</label>
+                </fieldset>
             </div>
             <div class="text-container">
-                <p>Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</p>
-                <textarea name="" id="textarea-1" cols="30" rows="10" maxlength="500" placeholder="Digite aqui, no máximo 500 caracteres."></textarea>
+                <fieldset>
+                    <legend>Responda</legend>
+                    <p>Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</p>
+                    <textarea name="" id="textarea-1" cols="30" rows="10" maxlength="500" placeholder="Digite aqui, no máximo 500 caracteres."></textarea>
+                </fieldset>
             </div>
             <div class="data-container">
-                <p>Qual a melhor data para realizar sua viagem?</p>
-                <label for="input-date">Data:</label>
-                <input type="date" name="data" id="input-date">
+                <fieldset>
+                    <legend>Qual a melhor data para realizar sua viagem?</legend>
+                    <label for="input-date">Data:</label>
+                    <input type="date" name="data" id="input-date">
+                </fieldset>
             </div>
             <div class="checkbox-container">
-                <input type="checkbox" name="oportunidades" id="oportunidades">
-                <label for="">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?</label>
-                <input type="checkbox" name="concordo-imagens" id="concordo-imagens">
-                <label for="">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.</label>
+                <fieldset>
+                    <legend>Termos</legend>
+                    <input type="checkbox" name="oportunidades" id="oportunidades">
+                    <label for="">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?</label>
+                    <input type="checkbox" name="concordo-imagens" id="concordo-imagens">
+                    <label for="">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.</label>
+                </fieldset>
+            </div>
+            <div class="btn-container">
+                <button id="btn-send" type="submit">Enviar</button>
+                <button id="btn-delete" type="reset">Apagar</button>
             </div>
         </form>
     </header>
