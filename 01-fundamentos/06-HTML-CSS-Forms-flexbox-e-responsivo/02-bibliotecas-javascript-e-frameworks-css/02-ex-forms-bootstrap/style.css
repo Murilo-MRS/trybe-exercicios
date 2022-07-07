@@ -39,11 +39,7 @@ fieldset {
     padding: 20px;
 }
 
-/* .input-content {
-    display: inline-block;
-    padding: 0 auto;
-} */
-
+/* 
 .input {
     display: block;
     width: 200px;
@@ -82,13 +78,13 @@ fieldset {
 .input-concordo {
     width: 90%;
     margin-top: 10px;
-}
+} */
 
-.btn-container {
+/* .btn-container {
     display: block;
     text-align: center;
-}
-
+} */
+/* 
 button {
     font-family: 'Poppins', sans-serif;;
     padding: 5px;
@@ -130,4 +126,4 @@ button {
     padding: 2px;
     width: 110px;
     transition: 0s;
-}
+} */
