@@ -83,3 +83,51 @@ fieldset {
     width: 90%;
     margin-top: 10px;
 }
+
+.btn-container {
+    display: block;
+    text-align: center;
+}
+
+button {
+    font-family: 'Poppins', sans-serif;;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 120px;
+}
+
+#btn-delete {
+    margin-left: 20px;
+    border: 1px solid #41197f;
+    background-color: #ffffff;
+    color: #41197f;
+}
+
+#btn-delete:hover {
+    background-color: #D6D6D6;
+}
+
+#btn-delete:active {
+    background-color: #D6D6D6;
+    padding: 2px;
+    width: 110px;
+    transition: 0s;
+}
+
+#btn-send {
+    border: 1px solid #41197f;
+    background-color: #41197f;
+    color: #ffffff;
+}
+
+#btn-send:hover {
+    background-color: #2C1155;
+}
+
+#btn-send:active {
+    background-color: #2C1155;
+    padding: 2px;
+    width: 110px;
+    transition: 0s;
+}
