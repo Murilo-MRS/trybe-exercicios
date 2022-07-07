@@ -65,3 +65,12 @@ fieldset {
     border: 1px solid #F4EDED;
     border-radius: 5px;
 }
+
+.input-data {
+    width: 128px;
+    margin: 0 auto;
+}
+
+.input-data label, .input-data input{
+    display: block;
+}
