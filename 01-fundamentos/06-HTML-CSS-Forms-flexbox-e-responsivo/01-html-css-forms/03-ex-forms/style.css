@@ -74,3 +74,12 @@ fieldset {
 .input-data label, .input-data input{
     display: block;
 }
+
+.input-oportunidade {
+    width: 90%;
+}
+
+.input-concordo {
+    width: 90%;
+    margin-top: 10px;
+}
