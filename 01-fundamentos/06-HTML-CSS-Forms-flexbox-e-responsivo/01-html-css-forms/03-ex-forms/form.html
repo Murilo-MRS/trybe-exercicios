@@ -4,28 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>TrybeTrip</title>
 </head>
 <body>
     <header id="cabecalho">
-        <div class="title">
+        <div class="title bg-container">
             <h1>TRYBETRIP</h1>
-            <p></p>
+            <p>Quer participar do sorteio a uma viagem totalmente de graça? Precha o formulário...</p>
         </div>
         <form action="" method="get">
-            <div class="dados-container">
+            <div class="dados-container bg-container">
                 <fieldset>
-                    <legend>Dados Pessoais</legend>
-                    <label for="input-name">Nome:</label>
-                    <input type="text" name="name" maxlength="40" minlength="10" id="input-name" required>
-                    <label for="input-email">Email:</label>
-                    <input type="email" name="email" maxlength="50" minlength="10" id="input-email" required>
+                    <legend><h4>Dados Pessoais</h4></legend>
+                    <div class="input-content">
+                        <div class="input">
+                            <label for="input-name">Nome:</label>
+                            <input type="text" name="name" maxlength="40" minlength="10" id="input-name" required>
+                        </div>
+                        <div class="input">
+                            <label for="input-email">Email:</label>
+                            <input type="email" name="email" maxlength="50" minlength="10" id="input-email" required>
+                        </div>
+                    </div>
                 </fieldset>
             </div>
-            <div class="radio-container">
+            <div class="radio-container bg-container">
                 <fieldset>
-                    <legend>Destino</legend>
+                    <legend><h4>Destino</h4></legend>
                     <input type="radio" name="opcao" class="input-radio" id="opcao-1">
                     <label for="opcao-1">Cidade</label>
                     <input type="radio" name="opcao" class="input-radio" id="opcao-2">
@@ -36,30 +45,30 @@
                     <label for="opcao-4">Montanhas</label>
                 </fieldset>
             </div>
-            <div class="text-container">
+            <div class="text-container bg-container">
                 <fieldset>
-                    <legend>Responda</legend>
+                    <legend><h4>Responda</h4></legend>
                     <p>Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</p>
                     <textarea name="" id="textarea-1" cols="30" rows="10" maxlength="500" placeholder="Digite aqui, no máximo 500 caracteres."></textarea>
                 </fieldset>
             </div>
-            <div class="data-container">
+            <div class="data-container bg-container">
                 <fieldset>
-                    <legend>Qual a melhor data para realizar sua viagem?</legend>
+                    <legend><h4>Qual a melhor data para realizar sua viagem?</h4></legend>
                     <label for="input-date">Data:</label>
                     <input type="date" name="data" id="input-date">
                 </fieldset>
             </div>
-            <div class="checkbox-container">
+            <div class="checkbox-container bg-container">
                 <fieldset>
-                    <legend>Termos</legend>
+                    <legend><h4>Termos</h4></legend>
                     <input type="checkbox" name="oportunidades" id="oportunidades">
                     <label for="">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?</label>
                     <input type="checkbox" name="concordo-imagens" id="concordo-imagens">
                     <label for="">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.</label>
                 </fieldset>
             </div>
-            <div class="btn-container">
+            <div class="btn-container bg-container">
                 <button id="btn-send" type="submit">Enviar</button>
                 <button id="btn-delete" type="reset">Apagar</button>
             </div>
