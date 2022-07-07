@@ -14,7 +14,7 @@
     <header id="cabecalho">
         <div class="title bg-container">
             <h1>TRYBETRIP</h1>
-            <p>Quer participar do sorteio a uma viagem totalmente de graça? Precha o formulário...</p>
+            <p>Concorra à Viagem dos seus sonhos com a TrybeTrip</p>
         </div>
         <form action="" method="get">
             <div class="dados-container bg-container">
@@ -23,11 +23,11 @@
                     <div class="input-content">
                         <div class="input">
                             <label for="input-name">Nome:</label>
-                            <input type="text" name="name" maxlength="40" minlength="10" id="input-name" required>
+                            <input type="text" name="input-name" maxlength="40" minlength="10" id="input-name" required>
                         </div>
                         <div class="input">
                             <label for="input-email">Email:</label>
-                            <input type="email" name="email" maxlength="50" minlength="10" id="input-email" required>
+                            <input type="email" name="input-email" maxlength="50" minlength="10" id="input-email" required>
                         </div>
                     </div>
                 </fieldset>
@@ -67,18 +67,18 @@
                 <fieldset>
                     <legend><h4>Termos</h4></legend>
                     <div class="input-oportunidade">
-                        <input type="checkbox" name="oportunidades" id="oportunidades">
-                        <label for="">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?</label>
+                        <input type="checkbox" value="oportunidades" name="oportunidades" id="oportunidades">
+                        <label for="oportunidades">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?</label>
                     </div>
                     <div class="input-concordo">
-                        <input type="checkbox" name="concordo-imagens" id="concordo-imagens">
-                        <label for="">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.</label>
+                        <input type="checkbox" value="compartilhar" name="concordo-imagens" id="concordo-imagens">
+                        <label for="concordo-imagens">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.</label>
                     </div>
                 </fieldset>
             </div>
             <div class="btn-container bg-container">
-                <button id="btn-send" type="submit">Enviar</button>
-                <button id="btn-delete" type="reset">Apagar</button>
+                <button id="btn-send" type="submit" disabled>Enviar</button>
+                <button id="btn-delete" type="button">Apagar</button>
             </div>
         </form>
     </header>
