@@ -17,6 +17,7 @@ body {
     padding: 15px;
     font-family: 'Poppins', sans-serif;
     box-shadow: 11px 14px 8px -4px rgba(0,0,0,0.31);
+    max-width: 600px;
 }
 
 .title h1,.title p {
@@ -54,3 +55,6 @@ fieldset {
     width: 200px;
 }
 
+.input-radio {
+    text-align: center;
+}
