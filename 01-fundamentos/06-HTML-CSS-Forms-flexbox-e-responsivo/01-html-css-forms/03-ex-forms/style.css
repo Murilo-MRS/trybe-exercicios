@@ -89,7 +89,7 @@ fieldset {
     text-align: center;
 }
 
-/* button {
+button {
     font-family: 'Poppins', sans-serif;;
     padding: 5px;
     border-radius: 5px;
@@ -130,4 +130,4 @@ fieldset {
     padding: 2px;
     width: 110px;
     transition: 0s;
-} */
+}
