@@ -58,3 +58,10 @@ fieldset {
 .input-radio {
     text-align: center;
 }
+
+#textarea-1 {
+    width: 100%;
+    margin-top: 5px;
+    border: 1px solid #F4EDED;
+    border-radius: 5px;
+}
