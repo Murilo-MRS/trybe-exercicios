@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMULÁRIO</title>
+    <link rel="stylesheet" href="bootstrap-5.2.0-beta1-dist/css/bootstrap.min.css">
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="bootstrap-5.2.0-beta1-dist/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <h1 class="display-4 text-muted">FORMULÁRIO</h1>
+    <form action="" method="GET" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="nome-completo">Nome Completo:</label>
+            <input class="form-control" type="text" name="nome" id="nome-completo" placeholder="Digite seu nome" required>
+        </div>
+        <div>
+            <label for="input-email">E-mail:</label>
+            <input class="form-control" type="email" name="email" id="input-email" placeholder="Digite seue-mail" required>
+        </div>
+        <div class="form-group">
+            <label for="">Estado onde você mora:</label>
+            <select class="form-control" name="estado" id="input-estado">
+                <option value="sp">São Paulo</option>
+                <option value="mg">Minas Gerais</option>
+                <option value="ap" selected>Amapá</option>
+                <option value="rs">Rio Grande do Sul</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <p>Escreva algo sobre você</p>
+            <input class="form-control btn btn-warning" type="file" name="foto" id="foto-perfil">
+        </div>
+        <div class="form-group">
+            <p>Escreva algo sobre você</p>
+            <textarea class="form-control" name="sobre-mim" id="textarea-1" cols="30" rows="5"></textarea>
+        </div>
+        <div class="form-group">
+            <p>Digite sua senha:</p>
+            <label for="input-senha"></label>
+            <input class="form-control" type="password" name="senha" id="input-senha" required>
+        </div>
+        <button type="submit" class="btn btn-success">Enviar Formulário</button>
+    </form>
+</body>
+
+</html>
