@@ -7,55 +7,67 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <title>TrybeTrip</title>
 </head>
 <body>
-    <header id="cabecalho">
-        <div class="title bg-container">
+    <header>
+        <div class="container mb-5 text-center">
             <h1>TRYBETRIP</h1>
             <p>Concorra à Viagem dos seus sonhos com a TrybeTrip</p>
         </div>
         <form action="" method="get">
-            <div class="dados-container bg-container">
-                <fieldset>
+            <div class="dados-container mb-3 container">
+                <fieldset class="container">
                     <legend><h4>Dados Pessoais</h4></legend>
                     <div class="input-content">
-                        <div class="input">
-                            <label for="input-name">Nome:</label>
-                            <input type="text" name="input-name" maxlength="40" minlength="10" id="input-name" required>
+                        <div class="form-label mb-3">
+                            <label for="input-name form-label">Nome:</label>
+                            <input type="text" class="form-control" name="input-name" maxlength="40" minlength="10" id="input-name" required>
                         </div>
-                        <div class="input">
-                            <label for="input-email">Email:</label>
-                            <input type="email" name="input-email" maxlength="50" minlength="10" id="input-email" required>
+                        <div class="input mb-3">
+                            <label for="input-email form-label">Email:</label>
+                            <input type="email" class="form-control" name="input-email" maxlength="50" minlength="10" id="input-email" required>
                         </div>
                     </div>
                 </fieldset>
             </div>
-            <div class="radio-container bg-container">
-                <fieldset>
+            <div class="radio-container mb-3 container">
+                <fieldset class="container">
                     <legend><h4>Destino</h4></legend>
                     <div class="input-radio">
-                        <input type="radio" name="opcao" value="cidade" id="opcao-1">
-                        <label for="opcao-1">Cidade</label>
-                        <input type="radio" name="opcao" value="campo" id="opcao-2">
-                        <label for="opcao-2">Campo</label>
-                        <input type="radio" name="opcao" value="praia" id="opcao-3">
-                        <label for="opcao-3">Praia</label>
-                        <input type="radio" name="opcao" value="montanha" id="opcao-4">
-                        <label for="opcao-4">Montanhas</label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="opcao" value="cidade" id="opcao-1">
+                            <label class="form-check-label" for="opcao-1">Cidade</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="opcao" value="campo" id="opcao-2">
+                            <label class="form-check-label" for="opcao-2">Campo</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="opcao" value="praia" id="opcao-3">
+                            <label class="form-check-label" for="opcao-3">Praia</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="opcao" value="montanha" id="opcao-4">
+                            <label class="form-check-label" for="opcao-4">Montanhas</label>
+                        </div>
                     </div>
                 </fieldset>
             </div>
-            <div class="text-container bg-container">
-                <fieldset>
+            <div class="text-container mb-3 container">
+                <fieldset class="container">
                     <legend><h4>Responda</h4></legend>
-                    <p>Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</p>
-                    <textarea name="textarea-1" id="textarea-1" cols="30" rows="10" maxlength="500" placeholder="   Digite aqui, no máximo 500 caracteres."></textarea>
+                    <div class="form-floating">
+                        <p class="d-block d-sm-block d-md-none">Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</p>
+                        <textarea class="form-control" name="textarea-1" id="textarea-1" cols="30" rows="10" maxlength="500" placeholder="Digite aqui, no máximo 500 caracteres."></textarea>
+                        <label for="textarea-1" class="d-none d-md-block">Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</label>
+                    </div>
                 </fieldset>
             </div>
-            <div class="data-container bg-container">
-                <fieldset>
+            <div class="data-container mb-3 container">
+                <fieldset class="container">
                     <legend><h4>Qual a melhor data para realizar sua viagem?</h4></legend>
                     <div class="input-data">
                         <label for="data">Data:</label>
@@ -63,8 +75,8 @@
                     </div>
                 </fieldset>
             </div>
-            <div class="checkbox-container bg-container">
-                <fieldset>
+            <div class="checkbox-container mb-3 container">
+                <fieldset class="container">
                     <legend><h4>Termos</h4></legend>
                     <div class="input-oportunidade">
                         <input type="checkbox" value="oportunidades" name="oportunidades" id="oportunidades">
@@ -76,12 +88,13 @@
                     </div>
                 </fieldset>
             </div>
-            <div class="btn-container bg-container">
-                <button id="btn-send" type="submit" disabled>Enviar</button>
-                <button id="btn-delete" type="button">Apagar</button>
+            <div class="btn-container mb-3 container">
+                <button class="btn btn-lg btn-primary" id="btn-send" type="submit" disabled>Enviar</button>
+                <button class="btn btn-lg btn-light" id="btn-delete" type="button">Apagar</button>
             </div>
         </form>
     </header>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
 </html>

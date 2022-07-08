@@ -1,4 +1,4 @@
-* {
+/* * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -39,7 +39,6 @@ fieldset {
     padding: 20px;
 }
 
-/* 
 .input {
     display: block;
     width: 200px;
@@ -78,14 +77,14 @@ fieldset {
 .input-concordo {
     width: 90%;
     margin-top: 10px;
-} */
+}
 
-/* .btn-container {
+.btn-container {
     display: block;
     text-align: center;
 } */
-/* 
-button {
+
+/* button {
     font-family: 'Poppins', sans-serif;;
     padding: 5px;
     border-radius: 5px;
