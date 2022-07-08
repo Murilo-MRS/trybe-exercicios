@@ -61,7 +61,7 @@
                     <legend><h4>Responda</h4></legend>
                     <div class="form-floating">
                         <p class="d-block d-sm-block d-md-none">Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</p>
-                        <textarea class="form-control" name="textarea-1" id="textarea-1" cols="30" rows="10" maxlength="500" placeholder="Digite aqui, no máximo 500 caracteres."></textarea>
+                        <textarea class="form-control mb-3" name="textarea-1" id="textarea-1" cols="30" rows="10" maxlength="500" placeholder="Digite aqui, no máximo 500 caracteres."></textarea>
                         <label for="textarea-1" class="d-none d-md-block">Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</label>
                     </div>
                 </fieldset>
@@ -70,25 +70,25 @@
                 <fieldset class="container">
                     <legend><h4>Qual a melhor data para realizar sua viagem?</h4></legend>
                     <div class="input-data">
-                        <label for="data">Data:</label>
-                        <input type="date" name="data" id="data">
+                        <label class="form-label " for="data">Data:</label>
+                        <input class="form-control mb-3" type="date" name="data" id="data">
                     </div>
                 </fieldset>
             </div>
             <div class="checkbox-container mb-3 container">
                 <fieldset class="container">
                     <legend><h4>Termos</h4></legend>
-                    <div class="input-oportunidade">
-                        <input type="checkbox" value="oportunidades" name="oportunidades" id="oportunidades">
-                        <label for="oportunidades">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?</label>
+                    <div class="form-check input-oportunidade">
+                        <input class="form-check-input" type="checkbox" value="oportunidades" name="oportunidades" id="oportunidades">
+                        <label class="form-check-label" for="oportunidades">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?</label>
                     </div>
-                    <div class="input-concordo">
-                        <input type="checkbox" value="compartilhar" name="concordo-imagens" id="concordo-imagens">
-                        <label for="concordo-imagens">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.</label>
+                    <div class="form-check input-concordo">
+                        <input class="form-check-input" type="checkbox" value="compartilhar" name="concordo-imagens" id="concordo-imagens">
+                        <label class="form-check-label" for="concordo-imagens">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.</label>
                     </div>
                 </fieldset>
             </div>
-            <div class="btn-container mb-3 container">
+            <div class="btn-container mb-5 container">
                 <button class="btn btn-lg btn-primary" id="btn-send" type="submit" disabled>Enviar</button>
                 <button class="btn btn-lg btn-light" id="btn-delete" type="button">Apagar</button>
             </div>
