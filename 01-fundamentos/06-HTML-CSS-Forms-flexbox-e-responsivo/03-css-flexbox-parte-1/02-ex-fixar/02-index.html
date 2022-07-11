@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox - Align Items</title>
+    <style>
+      .box-one {
+        color: #9069EF;
+        background-color: rgb(243, 243, 243);
+        border: 2px solid #232525;
+        font-size: 70px;
+        min-height: 80px;
+        margin: 10px 5px;
+        text-align: center;
+        width: 50px;
+      }
+
+      .box-two {
+        color: #9069EF;
+        background-color: rgb(243, 243, 243);
+        border: 2px solid #232525;
+        font-size: 50px;
+        min-height: 60px;
+        margin: 10px 5px;
+        text-align: center;
+        width: 50px;
+      }
+
+      .box-three {
+        color: #9069EF;
+        background-color: rgb(243, 243, 243);
+        border: 2px solid #232525;
+        font-size: 30px;
+        margin: 10px 5px;
+        min-height: 50px;
+        text-align: center;
+        width: 50px;
+      }
+
+      .box-container {
+        background-color: #0fa36b;
+        display: flex;
+        /* ADICIONE AQUI SEUS TESTES */
+      }
+
+      .center{
+        align-items: center;
+      } 
+      .flex-start{
+        align-items: flex-start;
+      } 
+      .flex-end{
+        align-items: flex-end;
+      } 
+      .stretch{
+        align-items: stretch;
+      } 
+      .baseline{
+        align-items: baseline;
+      }
+    </style>
+
+  </head>
+  <body>
+    <h1>align-items</h1>
+    <h1>center</h1>
+    <div class="box-container center">
+      <div class="box-one">1</div>
+      <div class="box-two">2</div>
+      <div class="box-three">3</div>
+    </div>
+    <h1>flex-start</h1>
+    <div class="box-container flex-start">
+      <div class="box-one">1</div>
+      <div class="box-two">2</div>
+      <div class="box-three">3</div>
+    </div>
+    <h1>flex-end</h1>
+    <div class="box-container flex-end">
+      <div class="box-one">1</div>
+      <div class="box-two">2</div>
+      <div class="box-three">3</div>
+    </div>
+    <h1>stretch</h1>
+    <div class="box-container stretch">
+      <div class="box-one">1</div>
+      <div class="box-two">2</div>
+      <div class="box-three">3</div>
+    </div>
+    <h1>baseline</h1>
+    <div class="box-container baseline">
+      <div class="box-one">1</div>
+      <div class="box-two">2</div>
+      <div class="box-three">3</div>
+    </div>
+  </body>
+</html>

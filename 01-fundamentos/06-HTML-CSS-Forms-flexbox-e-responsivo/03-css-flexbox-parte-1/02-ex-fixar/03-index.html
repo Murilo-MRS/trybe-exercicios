@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox - Align Content</title>
+    <style>
+      .box {
+        color: #9069EF;
+        background-color: rgb(243, 243, 243);
+        border: 2px solid #232525;
+        font-size: 50px;
+        min-height: 60px;
+        margin: 10px 5px;
+        text-align: center;
+        width: 30%;
+      }
+
+      .box-container {
+        /* ADICIONE AQUI SEUS TESTES */
+        background-color: #0fa36b;
+        display: flex;
+        flex-wrap: wrap;
+        height: 600px;
+      }
+
+
+      .center {
+        align-content: center;
+      }
+
+      .flex-start {
+        align-content: flex-start;
+      }
+
+      .flex-end {
+        align-content: flex-end;
+      }
+
+      .stretch {
+        align-content: stretch;
+      }
+
+      .space-around {
+        align-content: space-around;
+      }
+
+      .space-between {
+        align-content: space-between;
+      }
+
+    </style>
+
+  </head>
+  <body>
+    <h1>align-content</h1>
+    <h1>center</h1>
+    <div class="box-container center">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box">5</div>
+      <div class="box">6</div>
+      <div class="box">7</div>
+      <div class="box">8</div>
+      <div class="box">9</div>
+    </div>
+    <h1>flex-start</h1>
+    <div class="box-container flex-start">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box">5</div>
+      <div class="box">6</div>
+      <div class="box">7</div>
+      <div class="box">8</div>
+      <div class="box">9</div>
+    </div>
+    <h1>flex-end</h1>
+    <div class="box-container flex-end">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box">5</div>
+      <div class="box">6</div>
+      <div class="box">7</div>
+      <div class="box">8</div>
+      <div class="box">9</div>
+    </div>
+    <h1>stretch</h1>
+    <div class="box-container stretch">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box">5</div>
+      <div class="box">6</div>
+      <div class="box">7</div>
+      <div class="box">8</div>
+      <div class="box">9</div>
+    </div>
+    <h1>space-around</h1>
+    <div class="box-container space-around">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box">5</div>
+      <div class="box">6</div>
+      <div class="box">7</div>
+      <div class="box">8</div>
+      <div class="box">9</div>
+    </div>
+    <h1>space-between</h1>
+    <div class="box-container space-between">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box">5</div>
+      <div class="box">6</div>
+      <div class="box">7</div>
+      <div class="box">8</div>
+      <div class="box">9</div>
+    </div>
+  </body>
+</html>
