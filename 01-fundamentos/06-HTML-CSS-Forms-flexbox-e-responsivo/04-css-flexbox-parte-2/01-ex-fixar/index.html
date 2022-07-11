@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS FLEXBOX - ALIGN SELF</title>
+    <style>
+      .container {
+        border: 1px solid black;
+        display: flex;
+        height: 300px;
+        margin: auto;
+        width: 500px;
+      }
+
+      .keep {
+        align-self: center;
+        background-color: #FAA488;
+        display: flex;
+        justify-content: center;
+        width: 150px;
+        list-style: none;
+      }
+
+      .change-1 {
+        /* Altere a propriedade align-self. */
+        align-self: center;
+        background-color: #FBD26A;
+        display: flex;
+        justify-content: center;
+        width: 200px;
+        list-style: none;
+      }
+      .change-2 {
+        /* Altere a propriedade align-self. */
+        align-self: flex-start;
+        background-color: #FBD26A;
+        display: flex;
+        justify-content: center;
+        width: 200px;
+        list-style: none;
+      }
+      .change-3 {
+        /* Altere a propriedade align-self. */
+        align-self: flex-end;
+        background-color: #FBD26A;
+        display: flex;
+        justify-content: center;
+        width: 200px;
+        list-style: none;
+      }
+      .change-4 {
+        /* Altere a propriedade align-self. */
+        align-self: stretch;
+        background-color: #FBD26A;
+        display: flex;
+        justify-content: center;
+        width: 200px;
+        list-style: none;
+      }
+      .change-5 {
+        /* Altere a propriedade align-self. */
+        align-self: baseline;
+        background-color: #FBD26A;
+        display: flex;
+        justify-content: center;
+        width: 200px;
+        list-style: none;
+      }
+
+    </style>
+  </head>
+  <body>
+    <ul class="container">
+      <li class="keep">REFERÊNCIA</li>
+      <li class="change-1">ELEMENTO TESTE</li>
+      <li class="change-2">ELEMENTO TESTE</li>
+      <li class="change-3">ELEMENTO TESTE</li>
+      <li class="change-4">ELEMENTO TESTE</li>
+      <li class="change-5">ELEMENTO TESTE</li>
+      <li class="keep">REFERÊNCIA</li>
+    </ul>
+  </body>
+</html>
