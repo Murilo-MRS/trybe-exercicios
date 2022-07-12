@@ -49,9 +49,10 @@
   }
   
   .movie-container {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 700px;
+      display: flex;
+      flex-direction: column;
+      flex-basis: 700px;
+      flex-grow: 10;
   }
   
   .movie-container h2 {
@@ -63,7 +64,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-  }
+}
   
   .card-container div {
     align-items: center;
@@ -94,3 +95,4 @@
     margin: 10px 0;
     text-align: justify;
   }
+
