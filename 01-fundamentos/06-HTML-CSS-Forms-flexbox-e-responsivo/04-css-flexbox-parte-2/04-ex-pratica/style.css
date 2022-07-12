@@ -26,6 +26,7 @@
     flex-basis: 500px;
     order: 2;
     flex-grow: 1;
+    align-self: center;
   }
   
   .menu-container ul {
