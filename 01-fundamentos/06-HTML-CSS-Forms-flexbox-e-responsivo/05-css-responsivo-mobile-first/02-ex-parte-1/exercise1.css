@@ -1,0 +1,123 @@
+/*
+ * @see http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * apply a natural box layout model to all elements, but allowing components to change
+ */
+ html {
+    box-sizing: border-box;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    font-size: 18px;
+    margin: 18px;
+  }
+  
+  article {
+    width: 100%;
+  }
+  
+  h1 {
+    font-size: 30px;
+    text-align: center;
+  }
+  
+  h2 {
+    text-align: center;
+    font-size: 26px;
+  }
+  
+  img {
+      max-width: 100%;
+  }
+  
+  main {
+    width: 100%;
+  }
+  
+  section {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+  
+  figure {
+      margin: 0;
+      margin-bottom: 18px;
+  }
+  
+  figcaption {
+    font-size: .8em;
+  }
+
+  @media screen and (min-width: 750px) {
+    body {
+      background-color: olive;
+      font-size: 20px;
+      margin: 18px auto;
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+    }
+
+    article {
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      max-width: 800px;
+    }
+
+    h1 {
+      font-size: 36px;
+    }
+    
+    h2 {
+      font-size: 30px;
+    }
+
+    section {
+      justify-content: center;
+    }
+
+    figure {
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    img {
+      width: 40%;
+    }
+    
+    main {
+      width: 910px;
+      margin: 0 auto;
+    }
+  }
+
+  @media screen and (min-width: 1300px) {
+    body {
+      background-color: aquamarine;
+      font-size: 26px;
+      margin: 18px auto;
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+    }
+    
+    article {
+      max-width: 850px;
+    }
+
+    h1 {
+      font-size: 42px;
+    }
+    h2 {
+      font-size: 36px;
+    }
+    
+  }
+ 
