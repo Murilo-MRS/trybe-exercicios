@@ -1,0 +1,28 @@
+html {
+    box-sizing: border-box;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  .container {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    width: 85%;
+    margin: 0 auto;
+  }
+
+
+  @media screen and (min-width: 768px) {
+    body {
+        background-color: aqua;
+    }
+  }
+
+  @media (min-width: 992px) {
+    body {
+        background-color: bisque;
+    }
+  }
