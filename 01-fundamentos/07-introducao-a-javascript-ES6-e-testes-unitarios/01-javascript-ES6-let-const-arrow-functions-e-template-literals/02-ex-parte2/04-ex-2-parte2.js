@@ -13,3 +13,17 @@ const longestWord = (frase) => {
 }
 console.log(longestWord('Antônio foi no banheiro e não sabemos o que aconteceu'));
  // retorna 'aconteceu'
+// com FOR OF
+const maiorPalavra = (frase) => {
+    const arrayPalavra = frase.split(' ');
+    let aux = 0;
+    let resultado = '';
+    for(let palavra of arrayPalavra) {
+        if (palavra.length > aux) {
+            aux = palavra.length;
+            resultado = palavra;
+        }
+    }
+    return `${resultado} e com tamanho ${aux}`;
+}
+console.log(maiorPalavra('Antônio foi no banheiro e não sabemos o que aconteceu'));
