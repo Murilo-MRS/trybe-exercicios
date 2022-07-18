@@ -58,8 +58,22 @@ console.log(retornaTotalDeAlunos(allLessons));
 const getValueByNumber = (obj, index) => {
     const valores = Object.values(obj);
     return valores[index];
-}
+};
 console.log(getValueByNumber(lesson1, 0));
 
 // exercicio 8
+const verifyPair = (obj, key, value) => {
+    const objetoTestarValue = Object.entries(obj);
+    let igual = false;
+    for (const index in objetoTestarValue) {
+        if (objetoTestarValue[index][0] === key && objetoTestarValue[index][1] === value) {
+            igual = true;
+        }
+    }
+    return igual;
+};
 
+console.log(verifyPair(lesson3, 'turno', 'noite'));
+// Output: true,
+console.log(verifyPair(lesson3, 'materia', 'Maria Clara'));
+// Output: false
