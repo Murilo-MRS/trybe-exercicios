@@ -53,9 +53,13 @@ const retornaTotalDeAlunos = obj => {
     return totalAlunos;
 };
 console.log(retornaTotalDeAlunos(allLessons));
-// exercicio 7
 
+// exercicio 7
+const getValueByNumber = (obj, index) => {
+    const valores = Object.values(obj);
+    return valores[index];
+}
+console.log(getValueByNumber(lesson1, 0));
 
 // exercicio 8
-
 
