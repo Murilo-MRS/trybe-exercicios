@@ -1,4 +1,4 @@
-const sum = require('./01-sum');
+const sum = require('../01-sum');
 
 describe(' A função sum(a, b) retorna a soma do parâmetro a com o b', () => {
     test('A função sum(4, 5) deve retornar 9', () => {
