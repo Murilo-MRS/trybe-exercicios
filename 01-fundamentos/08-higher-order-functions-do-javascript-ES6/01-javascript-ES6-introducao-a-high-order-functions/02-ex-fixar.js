@@ -4,4 +4,4 @@ const sleep = () => console.log('Partiu dormir!!');;
 
 const doingThings = (func) => func();
 
-doingThings(coffeTime)
+doingThings(coffeTime);
