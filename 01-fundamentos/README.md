@@ -25,38 +25,38 @@
 
 ##### Bloco 4: [Introdução à JavaScript e Lógica de Programação](https://github.com/Murilo-MRS/trybe-exercicios/tree/main/01-fundamentos/04-introducao-a-javascript-e-logica-de-programacao)
 - [x] 4.1 - Introdução - JavaScript
-- [ ] 4.1 - JavaScript - Primeiros passos
-- [ ] 4.2 - JavaScript - Array e loop For
-- [ ] 4.3 - JavaScript - Lógica de Programação e Algoritmos
-- [ ] 4.4 - JavaScript - Objetos e funções
-- [ ] 4.5 - Projeto - Playground Functions
+- [x] 4.1 - JavaScript - Primeiros passos
+- [x] 4.2 - JavaScript - Array e loop For
+- [x] 4.3 - JavaScript - Lógica de Programação e Algoritmos
+- [x] 4.4 - JavaScript - Objetos e funções
+- [x] 4.5 - Projeto - Playground Functions
 
 ##### Bloco 5: [JavaScript: DOM, Eventos e Web Storage](https://github.com/Murilo-MRS/trybe-exercicios/tree/main/01-fundamentos/05-javascript-DOM-Eventos-e-web-storage)
-- [ ] 5.1 - JavaScript - DOM e seletores
-- [ ] 5.2 - JavaScript - Trabalhando com elementos
-- [ ] 5.3 - JavaScript - Eventos
-- [ ] 5.4 - JavaScript - Web Storage
-- [ ] 5.5 - Fundamentos - JavaScript - Projetos
-- [ ] 5.5 - Projeto - Arte com Pixels
-- [ ] 5.6 - Projeto - Lista de tarefas
-- [ ] 5.7 - (Bônus) Projeto - Meme Generator
-- [ ] 5.7 - (Bônus) Projeto - Adivinhe a Cor
-- [ ] 5.7 - (Bônus) Projeto - Carta Misteriosa
+- [X] 5.1 - JavaScript - DOM e seletores
+- [X] 5.2 - JavaScript - Trabalhando com elementos
+- [X] 5.3 - JavaScript - Eventos
+- [X] 5.4 - JavaScript - Web Storage
+- [X] 5.5 - Fundamentos - JavaScript - Projetos
+- [X] 5.5 - Projeto - Arte com Pixels
+- [X] 5.6 - Projeto - Lista de tarefas
+- [X] 5.7 - (Bônus) Projeto - Meme Generator
+- [X] 5.7 - (Bônus) Projeto - Adivinhe a Cor
+- [X] 5.7 - (Bônus) Projeto - Carta Misteriosa
 
 ##### Bloco 6: [HTML e CSS: Forms, Flexbox e Responsivo](https://github.com/Murilo-MRS/trybe-exercicios/tree/main/01-fundamentos/06-HTML-CSS-Forms-flexbox-e-responsivo)
-- [ ] 6.1 - HTML & CSS - Forms
-- [ ] 6.2 - Bibliotecas JavaScript e Frameworks CSS
-- [ ] 6.3 - Introdução - CSS Flexbox
-- [ ] 6.3 - CSS Flexbox - Parte 1
-- [ ] 6.4 - CSS Flexbox - Parte 2
-- [ ] 6.5 - CSS Responsivo - Mobile First
-- [ ] 6.6 - Projeto - Página inicial do Facebook
+- [X] 6.1 - HTML & CSS - Forms
+- [X] 6.2 - Bibliotecas JavaScript e Frameworks CSS
+- [X] 6.3 - Introdução - CSS Flexbox
+- [X] 6.3 - CSS Flexbox - Parte 1
+- [X] 6.4 - CSS Flexbox - Parte 2
+- [X] 6.5 - CSS Responsivo - Mobile First
+- [X] 6.6 - Projeto - Página inicial do Facebook
 
 ##### Bloco 7: [Introdução à JavaScript ES6 e Testes Unitários](https://github.com/Murilo-MRS/trybe-exercicios/tree/main/01-fundamentos/07-introducao-a-javascript-ES6-e-testes-unitarios)
-- [ ] 7.1 - JavaScript ES6 - let, const, arrow functions e template literals
-- [ ] 7.2 - JavaScript ES6 - Objects
-- [ ] 7.3 - Testes unitários em JavaScript
-- [ ] 7.4 - Projeto - JavaScript Testes Unitários
+- [X] 7.1 - JavaScript ES6 - let, const, arrow functions e template literals
+- [X] 7.2 - JavaScript ES6 - Objects
+- [X] 7.3 - Testes unitários em JavaScript
+- [X] 7.4 - Projeto - JavaScript Testes Unitários
 
 ##### Bloco 8: [Higher Order Functions do JavaScript ES6](https://github.com/Murilo-MRS/trybe-exercicios/tree/main/01-fundamentos/08-higher-order-functions-do-javascript-ES6)
 - [ ] 8.1 - JavaScript ES6 - Higher Order Functions - forEach, find, some, every, sort
