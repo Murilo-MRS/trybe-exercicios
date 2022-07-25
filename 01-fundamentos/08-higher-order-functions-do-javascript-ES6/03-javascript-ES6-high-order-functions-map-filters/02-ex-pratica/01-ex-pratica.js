@@ -108,5 +108,9 @@ const fantasyOrScienceFictionAuthors = (callback, arr) => {
 const oldBooks = (callback, arr) => {
     return callback(arr).map((element) => element.name)
 }
-console.log(oldBooks(oldBooksOrdered, books));
+// console.log(oldBooks(oldBooksOrdered, books));
 //-----EX 7
+const authorWith3DotsOnName = (arr) => {
+    return arr.find((element) => (element.author.name.split(' ').filter((ele) => ele.endsWith('.')).length === 3)).name
+}
+console.log(authorWith3DotsOnName(books));
