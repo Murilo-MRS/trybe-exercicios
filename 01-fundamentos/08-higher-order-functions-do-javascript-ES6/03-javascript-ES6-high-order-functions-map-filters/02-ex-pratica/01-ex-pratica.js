@@ -68,15 +68,42 @@ const formatedBookNames = (arr) => {
   return arr.map(
     (element) => `${element.name} - ${element.genre} - ${element.author.name}`
   );
-}
+};
 // console.log(formatedBookNames(books));
 //-----EX 2
-const nameAndAge = () => {
-    // escreva seu código aqui
-    return books.map((element) => ({
-        age: element.releaseYear - element.author.birthYear,
-        author: element.author.name,
-    })).sort((a, b) => a.age > b.age ? 1 : -1);
-}
-console.log(nameAndAge());
+const nameAndAge = (arr) => {
+  // escreva seu código aqui
+  return arr
+    .map((element) => ({
+      age: element.releaseYear - element.author.birthYear,
+      author: element.author.name,
+    }))
+    .sort((a, b) => (a.age > b.age ? 1 : -1));
+};
+// console.log(nameAndAge(books));
 //-----EX 3
+const fantasyOrScienceFiction = (arr) => {
+  // escreva seu código aqui
+  return arr.filter(
+    (element) =>
+      element.genre === "Fantasia" || element.genre === "Ficção Científica"
+  );
+};
+// console.log(fantasyOrScienceFiction(books));
+
+//-----EX 4
+const oldBooksOrdered = (arr) => {
+  // escreva seu código aqui
+  return arr
+    .filter((element) => 2022 - element.releaseYear >= 60)
+    .sort((a, b) => (a.releaseYear > b.releaseYear ? 1 : -1));
+};
+// console.log(oldBooksOrdered(books));
+//-----EX 5
+const fantasyOrScienceFictionAuthors = (callback, arr) => {
+  return callback(arr).map((element) => element.author.name).sort();
+};
+console.log(fantasyOrScienceFictionAuthors(fantasyOrScienceFiction, books));
+//-----EX 6
+
+//-----EX 7
