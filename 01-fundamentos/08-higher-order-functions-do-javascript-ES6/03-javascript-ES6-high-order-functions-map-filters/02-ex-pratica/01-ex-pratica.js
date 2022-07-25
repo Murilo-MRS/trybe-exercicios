@@ -103,7 +103,10 @@ const oldBooksOrdered = (arr) => {
 const fantasyOrScienceFictionAuthors = (callback, arr) => {
   return callback(arr).map((element) => element.author.name).sort();
 };
-console.log(fantasyOrScienceFictionAuthors(fantasyOrScienceFiction, books));
+// console.log(fantasyOrScienceFictionAuthors(fantasyOrScienceFiction, books));
 //-----EX 6
-
+const oldBooks = (callback, arr) => {
+    return callback(arr).map((element) => element.name)
+}
+console.log(oldBooks(oldBooksOrdered, books));
 //-----EX 7
