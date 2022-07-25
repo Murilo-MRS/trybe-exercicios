@@ -82,22 +82,36 @@ function smallerName() {
 }
 ///// exercicio 3
 function getNamedBook(characters) {
-    // escreva seu código aqui
-    let nameBook = "";
-    books.find((element) => {
-        if (element.name.length === characters) nameBook = element.name;
-    });
-    return nameBook;
+  // escreva seu código aqui
+  let nameBook = "";
+  books.find((element) => {
+    if (element.name.length === characters) nameBook = element.name;
+  });
+  return nameBook;
 }
 
 ///// exercicio 4
 function booksOrderedByReleaseYearDesc() {
-    // escreva aqui seu código
-    books.sort((a, b) => a.releaseYear < b.releaseYear ? 1 : -1)
-    
+  // escreva aqui seu código
+  books.sort((a, b) => (a.releaseYear < b.releaseYear ? 1 : -1));
 }
 
 ///// exercicio 5
 function everyoneWasBornOnSecXX() {
-    // escreva seu código aqui
-  }
+  // escreva seu código aqui
+  return books.every((element) => element.author.birthYear > 1900);
+}
+
+///// exercicio 6
+function someBookWasReleaseOnThe80s() {
+  // escreva seu código aqui
+  return books.some(
+    (element) => element.releaseYear >= 1980 || element.releaseYear < 1990
+  );
+}
+///// exercicio 7
+function authorUnique() {
+  // escreva seu código aqui
+  return books.every((element) => element.author.birthYear !== 1950);
+}
+console.log(authorUnique());
