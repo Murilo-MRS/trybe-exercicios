@@ -62,8 +62,21 @@ const books = [
 ];
 
 // Adicione o código do exercício aqui:
-function formatedBookNames(arr) {
+//-----EX 1
+const formatedBookNames = (arr) => {
+  // escreva seu código aqui
+  return arr.map(
+    (element) => `${element.name} - ${element.genre} - ${element.author.name}`
+  );
+}
+// console.log(formatedBookNames(books));
+//-----EX 2
+const nameAndAge = () => {
     // escreva seu código aqui
-    return arr.map((element) => `${element.name} - ${element.genre} - ${element.author.name}`)
-  }
-console.log(formatedBookNames(books));
+    return books.map((element) => ({
+        age: element.releaseYear - element.author.birthYear,
+        author: element.author.name,
+    })).sort((a, b) => a.age > b.age ? 1 : -1);
+}
+console.log(nameAndAge());
+//-----EX 3
