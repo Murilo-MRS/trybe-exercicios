@@ -106,7 +106,7 @@ function everyoneWasBornOnSecXX() {
 function someBookWasReleaseOnThe80s() {
   // escreva seu código aqui
   return books.some(
-    (element) => element.releaseYear >= 1980 || element.releaseYear < 1990
+    (element) => element.releaseYear >= 1980 && element.releaseYear < 1990
   );
 }
 ///// exercicio 7
@@ -115,3 +115,12 @@ function authorUnique() {
   return books.every((element) => element.author.birthYear !== 1950);
 }
 console.log(authorUnique());
+
+// const expectedResult = false;
+
+// function authorUnique() {
+//   return books.every((book) =>
+//     !books.some((bookSome) =>
+//       (bookSome.author.birthYear === book.author.birthYear)
+//       && (bookSome.author.name !== book.author.name)));
+// }
