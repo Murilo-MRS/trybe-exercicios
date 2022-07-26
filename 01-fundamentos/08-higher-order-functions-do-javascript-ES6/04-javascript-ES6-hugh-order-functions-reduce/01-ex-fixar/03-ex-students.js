@@ -75,10 +75,9 @@ const estudantes = [
 
 const bestSub = estudantes.map((element) => ({
   name: element.nome,
-  materia: element.materias.reduce((maiorNota, nota) => {
-    if (maiorNota.nota > nota.nota) return maiorNota;
-    return nota;
-  }).name,
+  materia: element.materias.reduce((maiorNota, nota) =>
+    maiorNota.nota > nota.nota ? maiorNota : nota
+  ).name,
 }));
 
 console.log(bestSub);
