@@ -7,7 +7,7 @@ const bigNumber = numbers.reduce(((maior, num) => maior > num ? maior : num),0)
 
 const num = [18, 19, 23, 53, 4, 5, 76, 23, 54];
 const pairSumFilterReduce = num.filter((num) => num % 2 === 0).reduce((soma, numPar) => soma + numPar);
-const pairSumReduce = num.reduce((soma, numPar) => (numPar % 2 === 0) ? soma + numPar : soma);
+const pairSumReduce = num.reduce((soma, numPar) => (numPar % 2 === 0) ? soma + numPar : soma, 0);
 
 console.log(pairSumFilterReduce);
 console.log(pairSumReduce);
