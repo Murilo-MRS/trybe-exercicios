@@ -60,6 +60,12 @@ const books = [
       releaseYear: 1928,
     },
   ];
+
+  const names = [
+    'Aanemarie', 'Adervandes', 'Akifusa',
+    'Abegildo', 'Adicellia', 'Aladonata',
+    'Abeladerco', 'Adieidy', 'Alarucha',
+  ];
   
-  module.exports = books;
+  module.exports = {books, names};
   // Adicione o código do exercício aqui:
