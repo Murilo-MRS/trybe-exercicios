@@ -1,5 +1,3 @@
-const multiply = (number, value) => {
-    // Escreva aqui a sua função
-  };
+const multiply = (number, value = 1) => number * value;
   
-  console.log(multiply(8));
+  console.log(multiply(8, 3));
