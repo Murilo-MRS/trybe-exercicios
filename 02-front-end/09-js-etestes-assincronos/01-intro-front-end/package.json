@@ -1,0 +1,15 @@
+{
+  "name": "01-intro-front-end",
+  "version": "1.0.0",
+  "description": "",
+  "main": "00-exemplo-callback.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^28.1.3"
+  }
+}
