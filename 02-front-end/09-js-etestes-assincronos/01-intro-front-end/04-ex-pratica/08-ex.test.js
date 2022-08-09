@@ -16,7 +16,16 @@ describe('A função getPokemonDetails', () => {
       })
     });
   
-    it('retorna um pokémon que existe no banco de dados', () => {
+    it('retorna um pokémon que existe no banco de dados', (done) => {
       // Escreva aqui seu código
+      const expectMessage =   `Olá, seu pokémon é o Charmander, o tipo dele é Fogo e a habilidade principal dele é Lança Chamas`;
+      getPokemonDetails('Charmander', (_error, message) => {
+        try {
+            expect(message).toEqual(expectMessage);
+            done();
+        } catch (error) {
+            done(error);
+        }
+      })
     });
   });
