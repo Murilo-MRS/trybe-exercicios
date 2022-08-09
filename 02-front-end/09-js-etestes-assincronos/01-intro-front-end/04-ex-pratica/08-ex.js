@@ -41,4 +41,6 @@ const pokemons = [
     }
   };
 
+getPokemonDetails('vasco', handlePokemonSearch);
 
+module.exports = { getPokemonDetails };
