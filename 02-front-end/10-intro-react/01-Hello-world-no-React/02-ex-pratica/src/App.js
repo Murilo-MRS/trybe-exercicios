@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-function App() {
+const Task = (value) => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <li key={value}>{value}</li>
   );
+}
+const compromissos = ['Estudar', 'Assistir aula', 'Praticar'];
+
+class App extends React.Component {
+  render() { 
+    return (
+      <ul className="App">
+        {
+          compromissos.map((e) => Task(e))
+        }
+      </ul>
+    );
+  }
 }
 
 export default App;
