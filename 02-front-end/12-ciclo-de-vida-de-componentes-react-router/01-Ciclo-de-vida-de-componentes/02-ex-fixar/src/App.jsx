@@ -14,7 +14,7 @@ class App extends Component {
       const requestUser = await fetch('https://api.randomuser.me/');
       const requestArray = await requestUser.json();
       this.setState({
-        results: requestArray[0],
+        results: requestArray,
         loading: false,
       })
     })
