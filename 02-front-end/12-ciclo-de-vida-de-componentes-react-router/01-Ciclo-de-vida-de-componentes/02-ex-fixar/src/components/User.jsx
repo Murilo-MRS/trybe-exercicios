@@ -24,7 +24,7 @@ class User extends Component {
       componentDidMount () {
         this.fetchUser();
       }
-    
+
       render () {
         const { loading, results } = this.state;
         
