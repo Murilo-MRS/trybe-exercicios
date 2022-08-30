@@ -25,6 +25,8 @@ class User extends Component {
         this.fetchUser();
       }
 
+      // não consegui usar shouldComponent update neste exercicio
+
       render () {
         const { loading, results } = this.state;
         
