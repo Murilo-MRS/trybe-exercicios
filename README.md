@@ -9,16 +9,16 @@
 - [X] Bloco 05: JavaScript: DOM, Eventos e Web Storage
 - [X] Bloco 06: HTML e CSS: Forms, Flexbox e Responsivo
 - [X] Bloco 07: Introdução à JavaScript ES6 e Testes Unitários
-- [ ] Bloco 08: Higher Order Functions do JavaScript ES6
+- [x] Bloco 08: Higher Order Functions do JavaScript ES6
 ##
 ## Desenvolvimento Front-end
 
-- [ ] Bloco 09: JavaScript e Testes Assíncronos
-- [ ] Bloco 10: Introdução à React
-- [ ] Bloco 11: Componentes com Estado, Eventos e Formulários com React
-- [ ] Bloco 12: Ciclo de Vida de Componentes e React Router
-- [ ] Bloco 13: Metodologias Ágeis
-- [ ] Bloco 14: Testes automatizados com React Testing Library
+- [X] Bloco 09: JavaScript e Testes Assíncronos
+- [X] Bloco 10: Introdução à React
+- [X] Bloco 11: Componentes com Estado, Eventos e Formulários com React
+- [X] Bloco 12: Ciclo de Vida de Componentes e React Router
+- [X] Bloco 13: Metodologias Ágeis
+- [X] Bloco 14: Testes automatizados com React Testing Library
 - [ ] Bloco 15: Gerenciamento de estado com Redux
 - [ ] Bloco 16: Projeto Jogo de Trivia
 - [ ] Bloco 17: Context API e React Hooks
