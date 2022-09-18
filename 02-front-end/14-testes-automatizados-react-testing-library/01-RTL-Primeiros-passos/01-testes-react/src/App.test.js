@@ -53,8 +53,6 @@ describe('Verifica o compnente App.', () => {
 
   });
   
-
-
   // acessar os elementos da tela
 
 
