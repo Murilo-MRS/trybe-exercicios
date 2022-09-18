@@ -1,4 +1,3 @@
-// App.js
 import React from 'react';
 import './App.css';
 
@@ -21,7 +20,7 @@ class App extends React.Component {
     const REQUEST_CONFIG = { headers: { Accept: 'application/json' } };
     fetch(API_URL, REQUEST_CONFIG)
       .then((response) => response.json())
-      .then(({ joke }) => this.setState({ joke }));
+      .then((data) => this.setState({ joke: data.joke }));
   }
 
   render() {
@@ -30,6 +29,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <p>{joke}</p>
+        <button type="button" onClick={ this.fetchJoke }>New joke</button>
       </div>
     );
   }
