@@ -1,0 +1,16 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.green-text {
+  color: green;
+}
+
+.red-text {
+  color: red;
+}
