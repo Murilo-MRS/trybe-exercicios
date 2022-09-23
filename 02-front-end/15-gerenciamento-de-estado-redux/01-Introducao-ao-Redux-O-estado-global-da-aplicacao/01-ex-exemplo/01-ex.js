@@ -1,4 +1,4 @@
-const Redux = require("redux");
+import { createStore } from 'redux';
 // type dentro de dispatch como passamos param p/ essa funcao usa-se arrow func
 const fazerLogin = () => ({
     type: "LOGIN",
@@ -25,7 +25,7 @@ const reducer = (state = ESTADO_INICIAL, action) => {
 };
 
 //================STORE=============///
-const store = Redux.createStore(reducer);
+const store = createStore(reducer);
 
 console.log(store.getState());
 //================ACTIONS=============///
