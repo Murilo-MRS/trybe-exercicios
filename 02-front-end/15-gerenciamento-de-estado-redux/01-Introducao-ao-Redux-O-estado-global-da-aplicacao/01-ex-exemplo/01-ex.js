@@ -14,11 +14,7 @@ const ESTADO_INICIAL = {
 const reducer = (state = ESTADO_INICIAL, action) => {
     switch (action.type) {
         case "LOGIN":
-            return {
-                ...state,
-                login: !state.login,
-                email: action.email,
-            };
+            return state;
         default:
             return state;
     }
@@ -29,5 +25,5 @@ const store = createStore(reducer);
 
 console.log(store.getState());
 //================ACTIONS=============///
-store.dispatch(fazerLogin())
+store.dispatch(fazerLogin());
 console.log(store.getState());
