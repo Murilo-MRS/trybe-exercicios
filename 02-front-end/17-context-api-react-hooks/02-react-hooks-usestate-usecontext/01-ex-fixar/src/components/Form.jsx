@@ -1,24 +1,28 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
+import FormContext from '../context/FormContext';
 
 function Form() {
-  const [name, setName] = useState('');
-  const [age, setAge] = useState('');
-  const [location, setLocation] = useState('');
-  const [module, setModule] = useState();
-
+  const { 
+    name,
+    setName,
+    age,
+    setAge,
+    location,
+    setLocation,
+    module,
+    setModule,
+   } = useContext(FormContext);
   return (
     <form>
       <fieldset>
-        <legend>
-          Dados pessoais
-        </legend>
+        <legend>Dados pessoais</legend>
         <label htmlFor="name">
           Nome completo
           <input
             type="text"
             id="name"
-            value={ name }
-            onChange={ ({ target }) => setName(target.value) }
+            value={name}
+            onChange={({ target }) => setName(target.value)}
           />
         </label>
         <br />
@@ -27,8 +31,8 @@ function Form() {
           <input
             type="number"
             id="age"
-            value={ age }
-            onChange={ ({ target }) => setAge(target.value) }
+            value={age}
+            onChange={({ target }) => setAge(target.value)}
           />
         </label>
         <br />
@@ -37,16 +41,14 @@ function Form() {
           <input
             type="text"
             id="city"
-            value={ location }
-            onChange={ ({ target }) => setLocation(target.value) }
+            value={location}
+            onChange={({ target }) => setLocation(target.value)}
           />
         </label>
         <br />
       </fieldset>
       <fieldset>
-        <legend>
-          Módulo
-        </legend>
+        <legend>Módulo</legend>
         <label htmlFor="fundamentals">
           Fundamentos
           <input
@@ -54,8 +56,8 @@ function Form() {
             id="fundamentals"
             name="module"
             value="Fundamentos"
-            checked={ module === 'Fundamentos' }
-            onChange={ ({ target }) => setModule(target.value) }
+            checked={module === 'Fundamentos'}
+            onChange={({ target }) => setModule(target.value)}
           />
         </label>
         <br />
@@ -66,8 +68,8 @@ function Form() {
             id="frontend"
             name="module"
             value="Front-end"
-            checked={ module === 'Front-end' }
-            onChange={ ({ target }) => setModule(target.value) }
+            checked={module === 'Front-end'}
+            onChange={({ target }) => setModule(target.value)}
           />
         </label>
         <br />
@@ -78,8 +80,8 @@ function Form() {
             id="backend"
             name="module"
             value="Back-end"
-            checked={ module === 'Back-end' }
-            onChange={ ({ target }) => setModule(target.value) }
+            checked={module === 'Back-end'}
+            onChange={({ target }) => setModule(target.value)}
           />
         </label>
         <br />
@@ -90,20 +92,21 @@ function Form() {
             id="cs"
             name="module"
             value="Ciência da computação"
-            checked={ module === 'Ciência da computação' }
-            onChange={ ({ target }) => setModule(target.value) }
+            checked={module === 'Ciência da computação'}
+            onChange={({ target }) => setModule(target.value)}
           />
         </label>
       </fieldset>
       <button
         type="submit"
-        onClick={ (event) => {
+        onClick={(event) => {
           event.preventDefault();
           console.log('Click!');
-        } }
+        }}
       >
         Enviar
       </button>
+      {<ul></ul>}
     </form>
   );
 }
