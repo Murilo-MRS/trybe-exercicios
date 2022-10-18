@@ -1,3 +1,4 @@
+import PropTypes from "prop-types"
 import React, { useState } from 'react';
 import AppContext from './FormContext';
 
@@ -6,7 +7,11 @@ function Provider({ children }) {
   const [age, setAge] = useState('');
   const [location, setLocation] = useState('');
   const [module, setModule] = useState();
+  const [data, setData] = useState([]);
 
+  const addData = (personalInfo) => {
+    setData(data.concat(personalInfo));
+  };
 
   const contextValue = {
     name,
@@ -17,6 +22,9 @@ function Provider({ children }) {
     setLocation,
     module,
     setModule,
+    data,
+    setData,
+    addData,
   };
 
   return (
@@ -24,6 +32,10 @@ function Provider({ children }) {
       {children}
     </AppContext.Provider>
   );
+}
+
+Provider.propTypes = {
+  children: PropTypes.node.isRequired,
 }
 
 export default Provider;

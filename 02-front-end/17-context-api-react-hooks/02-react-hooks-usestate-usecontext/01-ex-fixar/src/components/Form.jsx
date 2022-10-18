@@ -1,8 +1,9 @@
+import StudentInfo from './StudentInfo';
 import React, { useContext } from 'react';
 import FormContext from '../context/FormContext';
 
 function Form() {
-  const { 
+  const {
     name,
     setName,
     age,
@@ -11,7 +12,25 @@ function Form() {
     setLocation,
     module,
     setModule,
-   } = useContext(FormContext);
+    addData,
+  } = useContext(FormContext);
+
+  const handleClick = (event) => {
+    event.preventDefault();
+    const studentInfo = {
+      name,
+      age,
+      location,
+      module,
+    };
+    addData(studentInfo);
+
+    setName('');
+    setAge('');
+    setLocation('');
+    setModule(false);
+  };
+
   return (
     <form>
       <fieldset>
@@ -97,16 +116,10 @@ function Form() {
           />
         </label>
       </fieldset>
-      <button
-        type="submit"
-        onClick={(event) => {
-          event.preventDefault();
-          console.log('Click!');
-        }}
-      >
+      <button type="submit" onClick={handleClick}>
         Enviar
       </button>
-      {<ul></ul>}
+      <StudentInfo />
     </form>
   );
 }
