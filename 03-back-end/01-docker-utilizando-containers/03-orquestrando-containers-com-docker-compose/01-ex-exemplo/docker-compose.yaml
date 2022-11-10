@@ -25,4 +25,4 @@ services:
       - dados-do-banco:/data/db
 
 volumes:
-  - dados-do-banco:/data/db
+  dados-do-banco:
