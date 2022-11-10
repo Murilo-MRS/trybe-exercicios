@@ -1,0 +1,1 @@
+FROM chuanwen/cowsay:latest
