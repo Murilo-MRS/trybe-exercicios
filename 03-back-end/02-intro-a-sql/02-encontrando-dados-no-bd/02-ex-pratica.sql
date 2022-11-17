@@ -10,3 +10,5 @@ ORDER BY Name ASC;
 SELECT Name FROM Projects
 ORDER BY Name DESC;
 SELECT CONCAT('O projeto ', Name, ' precisou de ', Hours, ' horas para ser concluído.') as resultado FROM Projects;
+SELECT Name, Hours FROM Projects
+ORDER BY Hours DESC LIMIT 3;
