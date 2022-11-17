@@ -23,3 +23,4 @@ OFFSET 1;
 SELECT * FROM Projects
 ORDER BY Hours ASC
 LIMIT 5;
+SELECT CONCAT('Existem ', COUNT(Name), ' cientistas na tabela Scientists.') as resultado FROM Scientists;
