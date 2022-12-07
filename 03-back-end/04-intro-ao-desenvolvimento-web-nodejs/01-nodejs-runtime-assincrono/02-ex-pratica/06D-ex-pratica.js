@@ -1,22 +1,20 @@
 const fs = require('fs').promises;
 
-const getSimpsonById = async (id) => {
-  try {
-    const data = await fs.readFile('./simpsons.json', 'utf-8');
-    const parseData = JSON.parse(data);
-    const chosenSimpson = parseData.find((simpson) => Number(simpson.id) === id);
-    if (!chosenSimpson) {
-      throw new Error('id não encontrado');
-    }
-    return chosenSimpson;
-  } catch (error) {
-    console.error(error);
-  }
-};
+async function createSimpsonsFamily() {
+  const fileContent = await fs
+    .readFile('./simpsons.json', 'utf-8');
 
-const main = async () => {
-  const simpson = await getSimpsonById(1);
-  console.log(simpson);
-};
+  const simpsons = JSON.parse(fileContent);
+  const familyIds = [1, 2, 3, 4];
+
+  const simpsonsFamily = simpsons
+    .filter((simpson) => familyIds.includes(Number(simpson.id)));
+
+  await fs.writeFile('./simpsonsFamily.json', JSON.stringify(simpsonsFamily));
+}
+
+async function main() {
+  await createSimpsonsFamily();
+}
 
 main();
