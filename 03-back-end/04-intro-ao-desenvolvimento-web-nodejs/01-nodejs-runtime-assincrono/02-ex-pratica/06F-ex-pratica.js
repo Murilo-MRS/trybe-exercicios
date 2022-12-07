@@ -1,22 +1,30 @@
 const fs = require('fs').promises;
 
-const getSimpsonById = async (id) => {
-  try {
-    const data = await fs.readFile('./simpsons.json', 'utf-8');
-    const parseData = JSON.parse(data);
-    const chosenSimpson = parseData.find((simpson) => Number(simpson.id) === id);
-    if (!chosenSimpson) {
-      throw new Error('id não encontrado');
-    }
-    return chosenSimpson;
-  } catch (error) {
-    console.error(error);
-  }
-};
+async function replaceNelson() {
+  const fileContent = await fs.readFile('./simpsonsFamily.json', 'utf-8');
+  const simpsons = JSON.parse(fileContent);
 
-const main = async () => {
-  const simpson = await getSimpsonById(1);
-  console.log(simpson);
-};
+  // Filtramos o array para remover o personagem Nelson
+  const simpsonsWithoutNelson = simpsons.filter(
+    (simpson) => simpson.id !== '8'
+  );
 
+  // Criamos um novo Array contendo a personagem Maggie
+  const simpsonsWithMaggie = simpsonsWithoutNelson.concat([
+    { id: '15', name: 'Maggie Simpson' },
+  ]);
+  // com spread seria assim:
+  // const simpsonsWithMaggie = [ ...simpsonsWithoutNelson, simpsonsWithMaggie ]
+
+  // Escrevemos o novo array no arquivo e retornamos a promise de escrita
+  return fs.writeFile(
+    './simpsonsFamily.json',
+    JSON.stringify(simpsonsWithMaggie)
+  );
+}
+
+// ...
+function main() {
+  replaceNelson();
+}
 main();
