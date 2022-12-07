@@ -1,0 +1,13 @@
+{
+  "name": "01-ex-pratica",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bmi.js",
+  "scripts": {
+    "start": "node bmi",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Murilo Rodrigues Santana",
+  "license": "ISC"
+}
