@@ -81,4 +81,27 @@ app.put('/movies/:id', async (req, res) => {
   }
 });
 
+app.delete('/movies/:id', async (req, res) => {
+  const { id } = req.params
+  try {
+    const movies = await readFile();
+    // buscar index do filme
+    const index = movies.find((element) => element.id === Number(id));
+
+    if (!index) {
+      res.status(404).send({ message: 'This id do not exist' });
+    };
+    // atualiza o array pelo index
+    const newArrayAfterDelete = movies.filter((e) => e.id !== +id)
+    // reescreve no arquivo json
+    const updatedMovies = JSON.stringify(newArrayAfterDelete, null, 2);
+
+    await fs.writeFile(moviesPath, updatedMovies);
+    // response
+    res.status(204).end();
+  } catch (error) {
+    res.status(500).send({ message: error.message });
+  }
+});
+
 module.exports = app;
