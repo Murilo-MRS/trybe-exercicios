@@ -1,5 +1,5 @@
 const express = require('express');
-
+require('express-async-errors');
 const app = express();
 
 let nextId = 3;
