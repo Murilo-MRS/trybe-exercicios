@@ -1,5 +1,5 @@
 const express = require('express');
-const { validateName } = require('./middlewares/index');
+const { validateName, validatePrice, validateDescription } = require('./middlewares/index');
 
 const app = express();
 
@@ -11,8 +11,8 @@ app.use(express.json());
 
 app.get('/activities', (req, res) => res.status(200).json({ message: 'OK' }));
 
-app.post('/activities', validateName, (_req, res) => {
-  res.status(201).json({ message: 'Atividade cadastrada com sucesso!' });
+app.post('/activities', validateName, validatePrice, validateDescription, (_req, res) => {
+  return res.status(201).json({ message: 'Atividade cadastrada com sucesso!' });
 });
 
 // app.put('/teams/:id', validateTeam, (req, res) => {

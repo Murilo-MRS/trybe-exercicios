@@ -14,14 +14,32 @@ const validatePrice = (req, res, next) => {
   if (!price) {
     return res.status(400).json({ message: 'O campo price é obrigatório' });
   }
-  if (price >= 0) {
+  if (price < 0 || typeof price !== 'number') {
     return res.status(400)
       .json({ message: 'O campo price deve ser um número maior ou igual a zero' });
   }
   next();
 };
 
+const validateDescriptionKeys = (descriptionValue, res, value) => {
+  if (!descriptionValue) {
+    return res.status(400).json(
+      { message: `O campo ${value} é obrigatório` },
+    );
+  }
+};
+
+const validateDescription = (req, res, next) => {
+  const { description } = req.body;
+  return validateDescriptionKeys(description, res, 'description')
+    || validateDescriptionKeys(description.createdAt, res, 'createdAt')
+    || validateDescriptionKeys(description.rating, res, 'rating')
+    || validateDescriptionKeys(description.difficulty, res, 'difficulty')
+    || next();
+};
+
 module.exports = {
   validateName,
   validatePrice,
+  validateDescription,
 };
