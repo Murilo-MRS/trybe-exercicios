@@ -2,7 +2,10 @@ const express = require('express');
 const { validateName,
   validatePrice,
   validateDescription,
-  validateCreatedAt } = require('./middlewares/index');
+  validateCreatedAt,
+  validateRating,
+  validateDifficulty,
+ } = require('./middlewares/index');
 
 const app = express();
 
@@ -15,6 +18,8 @@ app.post('/activities',
   validatePrice,
   validateDescription,
   validateCreatedAt,
+  validateRating,
+  validateDifficulty,
   (_req, res) => res.status(201).json({ message: 'Atividade cadastrada com sucesso!' }));
 
 module.exports = app;
