@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "express": "4.17",
-    "mysql": "2.3"
+    "mysql": "2.3",
+    "mysql2": "2.3"
   }
 }
