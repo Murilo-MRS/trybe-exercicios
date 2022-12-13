@@ -1,5 +1,5 @@
 const express = require('express');
-const { validateName } = require('./middlewares/validateName');
+const { validateName } = require('./middlewares/index');
 
 const app = express();
 
