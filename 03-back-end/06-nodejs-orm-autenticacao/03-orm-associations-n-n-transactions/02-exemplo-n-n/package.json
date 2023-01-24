@@ -1,5 +1,5 @@
 {
-  "name": "01-exemplo-associations",
+  "name": "02-exemplo-n-n",
   "version": "1.0.0",
   "description": "",
   "main": "src/server.js",
