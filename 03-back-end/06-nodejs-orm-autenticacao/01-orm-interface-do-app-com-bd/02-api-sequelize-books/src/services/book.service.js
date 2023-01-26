@@ -13,28 +13,41 @@ const getById = async (bookId) => {
   return { type: '', message: book };
 };
 
-const create = async (bookInfo) => {
+const createBook = async (bookInfo) => {
   const newBook = await Book.create(bookInfo);
   console.log(newBook);
   return { type: '', message: newBook };
 };
 
-const update = async (id, { title, author, pageQuantity }) => {
+const updateBook = async (id, { title, author, pageQuantity }) => {
   const book = await Book.findByPk(id);
 
   if (!book) throw { type: 'BOOK_NOT_FOUND', message: 'Book not found' };
 
-  const updatedBook = await Book.update(
+  await Book.update(
     { title, author, pageQuantity },
     { where: { id } },
   );
-  console.log(updatedBook);
+
   return { type: '', message: 'Book updated!' };
+};
+
+const deleteBook = async (id) => {
+  const book = await Book.findByPk(id);
+
+  if (!book) throw { type: 'BOOK_NOT_FOUND', message: 'Book not found' };
+
+  await Book.destroy(
+    { where: { id } },
+  );
+
+  return { type: '', message: 'Book deleted!' };
 };
 
 module.exports = {
   getAll,
   getById,
-  create,
-  update,
+  createBook,
+  updateBook,
+  deleteBook,
 };
