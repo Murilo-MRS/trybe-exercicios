@@ -15,7 +15,7 @@ const getById = async (bookId) => {
 
 const createBook = async (bookInfo) => {
   const newBook = await Book.create(bookInfo);
-  console.log(newBook);
+  
   return { type: '', message: newBook };
 };
 
