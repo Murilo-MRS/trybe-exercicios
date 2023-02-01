@@ -1,4 +1,4 @@
-const UserModel = require("../models/user.model");
+const { User } = require("../models");
 
 const loginAuthetication = async ({ username, password }) => {
   if (!username || !password) {
@@ -7,7 +7,7 @@ const loginAuthetication = async ({ username, password }) => {
     throw error;
   }
 
-  const user = await UserModel.findOne({
+  const user = await User.findOne({
     attributes: ['id', 'name', 'username'],
     where: { username, password },
   });
