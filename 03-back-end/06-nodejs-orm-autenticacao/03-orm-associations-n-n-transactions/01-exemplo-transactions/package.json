@@ -1,0 +1,27 @@
+{
+  "name": "01-exemplo-associations",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "test": "NODE_ENV=test mocha ./tests/**/*$NAME*.test.js --exit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "10.0",
+    "express": "4.17",
+    "mysql2": "2.3",
+    "nodemon": "2.0",
+    "sequelize": "6.3"
+  },
+  "devDependencies": {
+    "chai": "4.3",
+    "chai-http": "4.3",
+    "mocha": "10.0",
+    "sequelize-cli": "6.2",
+    "sinon": "14.0"
+  }
+}
