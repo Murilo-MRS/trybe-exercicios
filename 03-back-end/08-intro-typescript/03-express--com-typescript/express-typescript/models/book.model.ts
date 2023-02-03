@@ -42,4 +42,11 @@ export default class BookModel {
       [title, price, author, isbn, id]
     );
   }
-}
+
+  public async remove(id: number) {
+    await this.connection.execute(
+      'DELETE FROM books WHERE id=?',
+      [id],
+    );
+  };
+};
