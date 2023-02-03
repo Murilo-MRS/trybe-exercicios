@@ -2,7 +2,7 @@
 
 import { Request, Response } from 'express';
 import statusCodes from '../statusCodes';
-import BookService from '../services/books.service';
+import BookService from '../services/book.service';
 
 class BooksController {
   constructor(private bookService = new BookService()) { }
@@ -11,6 +11,6 @@ class BooksController {
     const books = await this.bookService.getAll();
     res.status(statusCodes.OK).json(books);
   };
-}
+};
 
 export default BooksController;
