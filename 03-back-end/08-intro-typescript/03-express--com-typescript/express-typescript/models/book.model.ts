@@ -8,13 +8,13 @@ export default class BookModel {
 
   constructor(connection: Pool) {
     this.connection = connection;
-  }
+  };
 
   public async getAll(): Promise<Book[]> {
     const result = await this.connection.execute('SELECT * FROM books');
     const [rows] = result;
     return rows as Book[];
-  }
+  };
 
   public async getById(id: number): Promise<Book> {
     const result = await this.connection
@@ -22,7 +22,7 @@ export default class BookModel {
     const [rows] = result;
     const [book] = rows as Book[];
     return book;
-  }
+  };
 
   public async create(book: Book): Promise<Book> {
     const { title, price, author, isbn } = book;
@@ -33,7 +33,7 @@ export default class BookModel {
     const [dataInserted] = result;
     const { insertId } = dataInserted;
     return { id: insertId, ...book };
-  }
+  };
 
   public async update(id: number, book: Book) {
     const { title, price, author, isbn } = book;
@@ -41,7 +41,7 @@ export default class BookModel {
       'UPDATE books SET title=?, price=?, author=?, isbn=? WHERE id=?',
       [title, price, author, isbn, id]
     );
-  }
+  };
 
   public async remove(id: number) {
     await this.connection.execute(
