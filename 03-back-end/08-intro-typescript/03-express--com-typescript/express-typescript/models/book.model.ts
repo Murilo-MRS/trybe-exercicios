@@ -1,6 +1,6 @@
 // ./models/book.model.ts
 
-import { Pool, ResultSetHeader } from 'mysql2/promise';
+import { Pool, ResultSetHeader, RowDataPacket } from 'mysql2/promise';
 import Book from '../interfaces/book.interface';
 
 export default class BookModel {
@@ -11,9 +11,9 @@ export default class BookModel {
   };
 
   public async getAll(): Promise<Book[]> {
-    const result = await this.connection.execute('SELECT * FROM books');
+    const result = await this.connection.execute<RowDataPacket[] & Book[]>('SELECT * FROM books');
     const [rows] = result;
-    return rows as Book[];
+    return rows;
   };
 
   public async getById(id: number): Promise<Book> {
