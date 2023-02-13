@@ -38,4 +38,3 @@ const facilitator = new Facilitator('Silvinha');
 instructor.work(); // Victor está auxiliando as pessoas estudantes em mentorias.
 specialist.work(); // Gus está ministrando uma Aula Ao Vivo.
 facilitator.work(); // Silvinha está conduzindo um 1:1.
-console.log(facilitator.MIN_SALARY);
