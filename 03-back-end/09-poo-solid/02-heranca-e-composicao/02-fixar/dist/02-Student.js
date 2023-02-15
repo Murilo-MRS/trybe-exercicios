@@ -16,16 +16,9 @@ class Student extends _01_Person_1.default {
         return this._enrollment;
     }
     set enrollment(value) {
+        if (value.length < 16)
+            throw new Error('A matrícula deve possuir no mínimo 16 caracteres.');
         this._enrollment = value;
-    }
-    get name() {
-        return super.name;
-    }
-    set name(value) {
-        if (value.length < 3) {
-            throw new Error('O nome deve conter no mínimo 3 caracteres.');
-        }
-        super.name = value;
     }
     get examsGrades() {
         return this._examsGrades;
