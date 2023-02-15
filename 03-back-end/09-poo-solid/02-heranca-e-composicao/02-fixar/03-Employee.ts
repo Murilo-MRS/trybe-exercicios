@@ -6,7 +6,7 @@
 `Methods`:
     - generateRegistration: retorna uma string única gerada como registro */
 
-interface Employee {
+export default interface Employee {
   registration : string;
   salary : number;
   admissionDate : Date;

@@ -7,7 +7,7 @@
 `Validations`:
     - O nome tem que possuir no mínimo 3 caracteres */
 
-class Subject {
+export default class Subject {
 
   constructor(private _name: string) {
     this._name = _name;
