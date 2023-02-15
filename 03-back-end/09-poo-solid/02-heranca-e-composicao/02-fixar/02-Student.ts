@@ -1,15 +1,14 @@
+import Person from "./01-Person";
+import crypto from "crypto";
 
-class Student {
+class Student extends Person {
   private _enrollment: string;
-  private _name : string;
-  private _examsGrades: number[];
-  private _assignmentsGrades: number[];
+  private _examsGrades: number[] = [];
+  private _assignmentsGrades: number[] = [];
   
-  constructor(enrollment: string, name: string) {
-    this._enrollment = enrollment;
-    this._name = name;
-    this._examsGrades = [];
-    this._assignmentsGrades = [];
+  constructor(name: string, birthDate: Date) {
+    super(name, birthDate);
+    this._enrollment = Student.generateEnrollment();
   }
   
   get enrollment(): string {
@@ -17,19 +16,9 @@ class Student {
   }
   
   set enrollment(value: string) {
+    if (value.length < 16) throw new Error('A matrícula deve possuir no mínimo 16 caracteres.');
+
     this._enrollment = value;
-  }
-  
-  get name(): string {
-    return this._name;
-  }
-  
-  set name(value: string) {
-    if (value.length < 3) {
-      throw new Error('O nome deve conter no mínimo 3 caracteres.');
-    }
-  
-    this._name = value;
   }
   
   get examsGrades(): number[] {
@@ -58,31 +47,52 @@ class Student {
     this._assignmentsGrades = value;
   }
   
-    sumGrades(): number {
-      return [...this.examsGrades, ...this.assignmentsGrades]
-        .reduce((previousNote, note) => {
-          const nextNote = note + previousNote;
-  
-          return nextNote;
-        }, 0);
-    }
-  
-    sumAverageGrade(): number {
-      const sumGrades = this.sumGrades();
-      const divider = this.examsGrades.length + this.assignmentsGrades.length;
-  
-      return Math.round(sumGrades / divider);
-    }
+  sumGrades(): number {
+    return [...this.examsGrades, ...this.assignmentsGrades]
+      .reduce((previousNote, note) => {
+        const nextNote = note + previousNote;
+
+        return nextNote;
+      }, 0);
   }
   
-  // Para testar!
+  sumAverageGrade(): number {
+    const sumGrades = this.sumGrades();
+    const divider = this.examsGrades.length + this.assignmentsGrades.length;
+
+    return Math.round(sumGrades / divider);
+  }
+
+  private static generateEnrollment(): string {
+    return crypto.randomBytes(8).toString('hex');
+  }
+}
   
-  const personOne = new Student('202001011', 'Maria da Silva');
+// Para testar!
   
-  personOne.examsGrades = [25, 20, 23, 23];
-  personOne.assignmentsGrades = [45, 45];
+const personOne = new Student('Maria da Silva', new Date ('2010/01/11'));
+personOne.examsGrades = [25, 20, 23, 23];
+personOne.assignmentsGrades = [45, 45];
+
+
+const personTwo = new Student('Jorge da Massa', new Date ('2010/01/11'));
+personTwo.examsGrades = [15, 20, 23, 19];
+personTwo.assignmentsGrades = [32, 45];
   
-  console.log(personOne);
-  console.log('Soma de todas as notas: ', personOne.sumGrades());
-  console.log('Média de todas as notas: ', personOne.sumAverageGrade());
+
+const personThree = new Student('Carlao Bazuca', new Date ('2010/01/11'));
+personThree.examsGrades = [21, 20, 20, 20];
+personThree.assignmentsGrades = [30, 45];
   
+
+console.log(personOne);
+console.log('Soma de todas as notas: ', personOne.sumGrades());
+console.log('Média de todas as notas: ', personOne.sumAverageGrade());
+
+console.log(personTwo);
+console.log('Soma de todas as notas: ', personTwo.sumGrades());
+console.log('Média de todas as notas: ', personTwo.sumAverageGrade());
+
+console.log(personThree);
+console.log('Soma de todas as notas: ', personThree.sumGrades());
+console.log('Média de todas as notas: ', personThree.sumAverageGrade());
