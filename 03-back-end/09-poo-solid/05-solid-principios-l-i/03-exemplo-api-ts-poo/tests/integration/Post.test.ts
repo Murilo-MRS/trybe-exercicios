@@ -1,6 +1,6 @@
 import chai, { expect } from 'chai';
 import chaiHttp from 'chai-http';
-import App from '../../src/App';
+import App from '../../src/app';
 import IPost from '../../src/api/interfaces/IPost';
 import Post from '../../src/database/models/PostModel';
 import Sinon from 'sinon';
