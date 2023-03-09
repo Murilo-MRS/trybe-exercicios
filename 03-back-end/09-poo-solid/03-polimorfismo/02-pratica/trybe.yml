@@ -1,0 +1,9 @@
+ignore_files:
+  - __tests__/
+  - .eslintignore
+  - .eslintrc.json
+  - jest.config.js
+  - jest.d.ts
+  - tsconfig.json
+  # tsconfig ignorado pois algumas configs estão espelhadas nos testes
+  # mudar o tsconfig sem poder mudar os testes pode levar a erros no avaliador
