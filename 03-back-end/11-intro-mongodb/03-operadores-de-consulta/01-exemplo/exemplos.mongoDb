@@ -46,3 +46,9 @@ db.inventory.insertMany([
 
 use('exemplos');
 db.inventory.find({ qty: { $mod: [4, 0] } });
+
+use('exemplos');
+db.notas.insertMany([{ _id: 1, grade: [10, 5, 3, 10] },
+{ _id: 2, grade: [9, 8, 3, 10] },
+{ _id: 3, grade: [7, 5, 3, 10] },
+{ _id: 4, grade: [6, 5, 8, 9] }]);
