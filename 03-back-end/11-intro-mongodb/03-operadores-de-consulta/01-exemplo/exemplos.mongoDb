@@ -1,0 +1,48 @@
+use('exemplos');
+db.exemplos.insertMany([{ _id: 1, tags: ["red", "green"] },
+{ _id: 2, tags: ["apple", "lime"] },
+{ _id: 3, tags: "fruit" },
+{ _id: 4, tags: ["orange", "lemon", "grapefruit"] }]);
+
+use('exemplos');
+db.exemplos.find(
+  { tags: { $size: 2 } }
+);
+
+use('exemplos');
+db.monthlyBudget.insertMany([
+  { _id: 1, category: "food", budget: 400, spent: 450 },
+  { _id: 2, category: "drinks", budget: 100, spent: 150 },
+  { _id: 3, category: "clothes", budget: 100, spent: 50 },
+  { _id: 4, category: "misc", budget: 500, spent: 300 },
+  { _id: 5, category: "travel", budget: 200, spent: 650 }
+])
+
+use('exemplos');
+db.monthlyBudget.find(
+  {
+    $expr: { $gt: [ "$spent", "$budget" ] }
+  }
+);
+
+use('exemplos');
+db.products.insertMany([
+  { _id: 100, sku: "abc123", description: "Single line description." },
+  { _id: 101, sku: "abc789", description: "First line\nSecond line" },
+  { _id: 102, sku: "xyz456", description: "Many spaces before     line" },
+  { _id: 103, sku: "xyz789", description: "Multiple\nline description" }
+])
+
+use('exemplos');
+db.products.find({ sku: { $regex: /789$/ } });
+db.products.find({ sku: { $regex: /^ABC/i } });
+
+use('exemplos');
+db.inventory.insertMany([
+  { _id: 1, item: "abc123", qty: 0 },
+  { _id: 2, item: "xyz123", qty: 5 },
+  { _id: 3, item: "ijk123", qty: 12 }
+])
+
+use('exemplos');
+db.inventory.find({ qty: { $mod: [4, 0] } });
