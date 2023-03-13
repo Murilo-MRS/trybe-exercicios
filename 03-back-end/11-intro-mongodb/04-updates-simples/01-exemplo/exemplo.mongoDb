@@ -1,0 +1,182 @@
+use('conteudo_trybe');
+db.inventory.insertMany([
+{ "item": "journal", "qty": 25, "size": { "h": 14, "w": 21, "uom": "cm" }, "status": "A" },
+{ "item": "notebook", "qty": 50, "size": { "h": 8.5, "w": 11, "uom": "in" }, "status": "A" },
+{ "item": "paper", "qty": 100, "size": { "h": 8.5, "w": 11, "uom": "in" }, "status": "D" },
+{ "item": "planner", "qty": 75, "size": { "h": 22.85, "w": 30, "uom": "cm" }, "status": "D" },
+{ "item": "postcard", "qty": 45, "size": { "h": 10, "w": 15.25, "uom": "cm" }, "status": "A" }
+]);
+
+use('conteudo_trybe');
+db.inventory.updateOne(
+  { item: "paper" },
+  { $set: { "size.uom": "cm", status: "P" } }
+);
+
+use('conteudo_trybe');
+db.inventory.find({})
+
+use('conteudo_trybe');
+db.inventory.updateMany(
+  { "qty": { $lt: 50 } },
+  { $set: { "size.uom": "in", status: "P" } }
+);
+
+use('conteudo_trybe');
+db.inventory.find({})
+
+use('conteudo_trybe');
+db.products.insertOne({
+  _id: 100,
+  sku: "abc123",
+  quantity: 250,
+  instock: true,
+  reorder: false,
+  details: { model: "14Q2", make: "xyz" },
+  tags: [ "apparel", "clothing" ],
+  ratings: [ { by: "ijk", rating: 4 } ]
+})
+
+use('conteudo_trybe');
+db.products.updateOne(
+  { _id: 100 },
+  { $set: {
+      quantity: 500,
+      details: { model: "14Q3", make: "xyz" },
+      tags: [ "coats", "outerwear", "clothing" ]
+    }
+  }
+);
+db.products.update(
+  { _id: 100 },
+  { $set: { "details.make": "zzz" } }
+);
+db.products.update(
+  { _id: 100 },
+  { $set: {
+      "tags.1": "rain gear",
+      "ratings.0.rating": 2
+    }
+  }
+);
+
+use('conteudo_trybe');
+db.products.insertOne(
+  { "_id": 1, "item": "ABC", "price": NumberDecimal("10.99"), "qty": 25 }
+);
+
+use('conteudo_trybe');
+db.products.update(
+  { _id: 1 },
+  { $mul: { price: NumberDecimal("1.25"), qty: 2 } }
+);
+
+use('conteudo_trybe');
+db.products.insertOne(
+  { _id: 2, item: "Unknown" }
+);
+
+use('conteudo_trybe');
+db.products.update(
+  { _id: 2 },
+  { $mul: { price: NumberLong("100") } }
+);
+
+use('conteudo_trybe');
+db.increment.insertOne(
+  {
+    _id: 1,
+    sku: "abc123",
+    quantity: 10,
+    metrics: {
+      orders: 2,
+      ratings: 3.5
+    }
+  }
+)
+
+use('conteudo_trybe');
+db.increment.update(
+  { sku: "abc123" },
+  { $inc: { quantity: -2, "metrics.orders": 1 } }
+);
+
+use('conteudo_trybe');
+db.scores.insertOne(
+  { _id: 1, highScore: 800, lowScore: 200 }
+);
+
+use('conteudo_trybe');
+db.scores.update({ _id: 1 }, { $min: { lowScore: 150 } });
+
+use('conteudo_trybe');
+db.scores.update({ _id: 1 }, { $max: { highScore: 950 } });
+
+use('conteudo_trybe');
+db.scores.find();
+
+use('conteudo_trybe');
+db.tags.insertOne(
+  {
+    _id: 1,
+    desc: "crafts",
+    dateEntered: ISODate("2019-10-01T05:00:00Z"),
+    dateExpired: ISODate("2019-10-01T16:38:16Z")
+  }
+);
+
+use('conteudo_trybe');
+db.tags.update(
+  { _id: 1 },
+  {
+    $min: { dateEntered: new Date("2019-09-25") },
+    $max: { dateExpired: new Date("2019-10-02") }
+  }
+);
+
+use('conteudo_trybe');
+db.tags.find();
+
+use('conteudo_trybe');
+db.customers.insertOne(
+  { _id: 1, status: "a", lastModified: ISODate("2013-10-02T01:11:18.965Z") }
+);
+
+use('conteudo_trybe');
+db.customers.updateOne(
+  { _id: 1 },
+  { $currentDate: {
+      lastModified: true,
+      "cancellation.date": { $type: "timestamp" }
+    }, $set: {
+      "cancellation.reason": "user request",
+      status: "D"
+    }
+  }
+);
+
+use('conteudo_trybe');
+db.customers.find();
+
+use('conteudo_trybe');
+db.fruits.insertOne(
+  { _id: 100, name: "Banana", quantity: 100, inStock: true }
+);
+
+use('conteudo_trybe');
+db.fruits.updateOne(
+  { name: "Banana" },
+  { $rename: {
+      "name": "productName"
+    }
+  }
+);
+
+use('conteudo_trybe');
+db.fruits.updateMany(
+  { productName: "Banana" },
+  { $unset: { quantity: "" } }
+);
+
+use('conteudo_trybe');
+db.fruits.find();
