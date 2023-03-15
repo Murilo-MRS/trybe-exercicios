@@ -1,0 +1,216 @@
+use('sales');
+db.supplies.updateOne(
+  { _id: 1 },
+  {
+    $push: {
+      items: {
+        "name": "notepad",
+        "price":  35.29,
+        "quantity": 2,
+      },
+    },
+  },
+  { upsert: true },
+);
+
+use('sales');
+db.supplies.updateOne(
+  {},
+  {
+    $push: {
+      items: {
+        $each: [
+          {
+            "name": "pens",
+            "price": 56.12,
+            "quantity": 5,
+          },
+          {
+            "name": "envelopes",
+            "price": 19.95,
+            "quantity": 8,
+          },
+        ],
+      },
+    },
+  },
+  { upsert: true },
+);
+
+use('sales');
+db.supplies.updateOne(
+  { _id: 1 },
+  {
+    $push: {
+      items: {
+        $each: [
+          {
+            "name" : "notepad",
+            "price" : 35.29,
+            "quantity" : 2,
+          },
+          {
+            "name": "envelopes",
+            "price": 19.95,
+            "quantity": 8,
+          },
+          {
+            "name": "pens",
+            "price": 56.12,
+            "quantity": 5,
+          },
+        ],
+        $sort: { "quantity": -1 },
+        $slice: 2,
+      },
+    },
+  },
+  { upsert: true },
+);
+db.dropDatabase()
+use('sales');
+db.supplies.find({});
+
+use('sales');
+db.supplies.updateOne(
+  { _id: 1 },
+  {
+    $push: {
+      items: {
+        $each: [
+          {
+            "name" : "notepad",
+            "price" : 35.29,
+            "quantity" : 2,
+          },
+          {
+            "name": "envelopes",
+            "price": 19.95,
+            "quantity": 8,
+          },
+          {
+            "name": "pens",
+            "price": 56.12,
+            "quantity": 5,
+          },
+        ],
+        $sort: { "quantity": -1 },
+        $slice: 2,
+      },
+    },
+  },
+  { upsert: true },
+);
+
+use('sales'); //primeiro item do array
+db.supplies.updateOne({ _id: 1 }, { $pop: { items: -1 } });
+use('sales'); //ultimo item do array
+db.supplies.updateOne({ _id: 1 }, { $pop: { items: 1 } });
+
+use('sales');
+db.supplies.insertOne(
+  {
+    _id: 2,
+    items: [
+      {
+        "name" : "pencil",
+        "price" : 5.29,
+        "quantity" : 2,
+      },
+      {
+        "name": "envelopes",
+        "price": 19.95,
+        "quantity": 8,
+      },
+      {
+        "name": "backpack",
+        "price": 80.12,
+        "quantity": 1,
+      },
+      {
+        "name": "pens",
+        "price": 56.12,
+        "quantity": 5,
+      },
+    ],
+  }
+);
+
+// Removendo todos os itens iguais a um valor especificado
+use('sales');
+db.supplies.updateMany(
+  {},
+  {
+    $pull: {
+      items: {
+        name: { $in: ["pens", "envelopes"] },
+      },
+    },
+  },
+);
+
+// Removendo todos os itens que atendem a uma condição diretamente no $pull
+use('profiles');
+db.profiles.insertOne({ _id: 1, votes: [3, 5, 6, 7, 7, 8] })
+db.profiles.updateOne(
+  { _id: 1 },
+  {
+    $pull: {
+      votes: { $gte: 6 },
+    },
+  },
+);
+
+use('survey');
+db.survey.insertOne(
+  {
+    _id: 1,
+    results: [
+      { item: "A", score: 5 },
+      { item: "B", score: 8, comment: "Strongly agree" },
+    ],
+  },
+  {
+    _id: 2,
+    results: [
+      { item: "C", score: 8, comment: "Strongly agree" },
+      { item: "B", score: 4 },
+    ],
+  }
+);
+db.survey.updateMany(
+  {},
+  {
+    $pull: {
+      results: { score: 8 , item: "B" },
+    },
+  },
+);
+
+//  $addToSet nao permite add duplicados no array
+use('inventory')
+db.survey.insertOne({
+  _id: 1,
+  item: "polarizing_filter",
+  tags: ["electronics", "camera"],
+});
+db.inventory.updateOne(
+  { _id: 1 },
+  { $addToSet: { tags: "accessories" } },
+);
+db.inventory.updateOne(
+  { _id: 1 },
+  { $addToSet: { tags: "camera"  } },
+);
+db.survey.insertOne({ _id: 2, item: "cable", tags: ["electronics", "supplies"] })
+// add varios elemento precisa do $each
+db.inventory.updateOne(
+  { _id: 2 },
+  {
+    $addToSet: {
+      tags: {
+        $each: ["camera", "electronics", "accessories"],
+      },
+    },
+  },
+);
