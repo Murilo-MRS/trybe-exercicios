@@ -1,0 +1,44 @@
+{
+  "name": "poo-trix",
+  "version": "1.0.0",
+  "description": "Repositório que guiará a seção 12 - APIs orientadas a objetos e NoSQL",
+  "main": "src/server.ts",
+  "scripts": {
+    "dev": "ts-node-dev src/server.ts",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "test": "mocha -r ts-node/register tests/unit/**/*.test.ts --exit",
+    "test:coverage": "nyc npm test"
+  },
+  "keywords": [],
+  "author": "Trybe Desenvolvimento de Software LTDA",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "4.17.13",
+    "@types/node": "16.11.7",
+    "@typescript-eslint/eslint-plugin": "5.3.1",
+    "@typescript-eslint/parser": "5.3.1",
+    "dotenv": "16.0.0",
+    "eslint": "7.32.0",
+    "eslint-config-airbnb-base": "15.0.0",
+    "eslint-config-airbnb-typescript": "15.0.0",
+    "eslint-plugin-editorconfig": "3.2.0",
+    "eslint-plugin-import": "2.25.3",
+    "eslint-plugin-mocha": "9.0.0",
+    "eslint-plugin-sonarjs": "0.10.0",
+    "ts-node": "10.4.0",
+    "ts-node-dev": "1.1.8",
+    "typescript": "4.4.3",
+    "@istanbuljs/nyc-config-typescript": "1.0.2",
+    "@types/chai": "4.3.0",
+    "@types/mocha": "9.1.0",
+    "chai": "4.3.6",
+    "mocha": "9.2.1",
+    "nyc": "15.1.0",
+    "@types/sinon": "10.0.11",
+    "sinon": "13.0.1"
+  },
+  "dependencies": {
+    "express": "4.17.1",
+    "mongoose": "6.1.8"
+  }
+}
