@@ -1,0 +1,13 @@
+{
+  "cSpell.words": [
+    "middlewares",
+    "trix",
+    "Trybe",
+    "tryber",
+    "LTDA",
+    "sonarjs",
+  ],
+  "files.exclude": {
+    "**/.gitkeep": true
+  },
+}

@@ -1,0 +1,118 @@
+{
+  "client": "Thunder Client",
+  "collectionName": "Trix",
+  "dateExported": "2022-10-04T17:02:23.434Z",
+  "version": "1.1",
+  "folders": [],
+  "requests": [
+    {
+      "_id": "bbebc7d3-983b-4924-80f2-e2b4be32cb4c",
+      "colId": "480e6dca-81b1-467a-9763-a147694adb75",
+      "containerId": "",
+      "name": "Criar uma transferência",
+      "url": "http://localhost:3001/transfer",
+      "method": "POST",
+      "sortNum": 5000,
+      "created": "2022-10-04T13:57:01.652Z",
+      "modified": "2022-10-04T16:59:24.072Z",
+      "headers": [],
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"payByPerson\": \"Abreu\",\n  \"payToPerson\": \"Pompeu\",\n  \"amount\": 40,\n  \"key\": \"187.401.600-33\"\n}",
+        "form": []
+      },
+      "tests": []
+    },
+    {
+      "_id": "64c1bb15-0a3f-46dd-8280-346e418d9fbd",
+      "colId": "480e6dca-81b1-467a-9763-a147694adb75",
+      "containerId": "",
+      "name": "Alterar o status de uma transferência",
+      "url": "http://localhost:3001/transfer/ESCREVA_O_ID_AQUI",
+      "method": "PATCH",
+      "sortNum": 8750,
+      "created": "2022-10-04T13:57:01.656Z",
+      "modified": "2022-10-04T17:01:32.370Z",
+      "headers": [],
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"key\": \"187.401.600-33\"\n}",
+        "form": []
+      },
+      "tests": []
+    },
+    {
+      "_id": "1c3f534a-ccd5-46e1-9ff7-7214ccf31936",
+      "colId": "4dbd0c0a-2372-4765-ac5b-be1e274a7f2a",
+      "containerId": "",
+      "name": "Cria chave CPF",
+      "url": "http://localhost:3001/key/register",
+      "method": "POST",
+      "sortNum": 18750,
+      "created": "2022-10-05T13:34:18.303Z",
+      "modified": "2022-10-05T13:56:01.143Z",
+      "headers": [],
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"value\": \"187.401.600-33\",\n  \"owner\": \"Pompeu\",\n  \"type\": \"cpf\"\n}",
+        "form": []
+      },
+      "tests": []
+    },
+    {
+      "_id": "84afee97-103f-4a52-8200-22de9493989a",
+      "colId": "4dbd0c0a-2372-4765-ac5b-be1e274a7f2a",
+      "containerId": "",
+      "name": "Cria chave Phone Number",
+      "url": "http://localhost:3001/key/register",
+      "method": "POST",
+      "sortNum": 38750,
+      "created": "2022-10-05T13:34:18.305Z",
+      "modified": "2022-10-05T13:34:18.305Z",
+      "headers": [],
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"value\": \"+55 (48) 987231570\",\n  \"owner\": \"Nancy Ayala\",\n  \"type\": \"phonenumber\"\n}",
+        "form": []
+      },
+      "tests": []
+    },
+    {
+      "_id": "c8f8126a-9eab-4061-8825-8409d8a40271",
+      "colId": "4dbd0c0a-2372-4765-ac5b-be1e274a7f2a",
+      "containerId": "",
+      "name": "Cria chave Mail",
+      "url": "http://localhost:3001/key/register",
+      "method": "POST",
+      "sortNum": 48750,
+      "created": "2022-10-05T13:34:18.306Z",
+      "modified": "2022-10-05T13:34:18.306Z",
+      "headers": [],
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"value\": \"nancyayala_dev@gmail.com\",\n  \"owner\": \"Nancy Ayala\",\n  \"type\": \"mail\"\n}",
+        "form": []
+      },
+      "tests": []
+    },
+    {
+      "_id": "4bc90fd4-1a35-40f3-b6eb-1fcb69cdd23a",
+      "colId": "4dbd0c0a-2372-4765-ac5b-be1e274a7f2a",
+      "containerId": "",
+      "name": "Listar Chaves por Value",
+      "url": "http://localhost:3001/key/nancyayala_dev@gmail.com",
+      "method": "GET",
+      "sortNum": 68750,
+      "created": "2022-10-05T13:34:18.308Z",
+      "modified": "2022-10-05T13:34:18.308Z",
+      "headers": [],
+      "params": [],
+      "tests": []
+    }
+  ]
+}
