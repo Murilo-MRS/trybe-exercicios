@@ -1,6 +1,6 @@
 import json
 from unittest.mock import mock_open, patch
-from pokemon import retrieve_pokemons_by_type
+from pokemon_mock import retrieve_pokemons_by_type
 
 
 def test_retrieve_pokemons_by_type():
