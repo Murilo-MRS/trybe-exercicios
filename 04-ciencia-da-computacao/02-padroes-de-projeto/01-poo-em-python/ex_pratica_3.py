@@ -63,7 +63,7 @@ class Circle(GeometricFigure):
 
     def __str__(self):
         return (
-            f"{self.__class__.__name__}\n" 
+            f"{self.__class__.__name__}\n"
             f" radius: {self.radius}\n"
             f" permiter: {self.perimeter():.2f}\n"
             f" area: {self.area():.2f}"
