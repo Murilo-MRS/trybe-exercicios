@@ -7,7 +7,7 @@ emitir uma ordem de cobrança bancária para cada
 cliente que possui débito automático. Temos um código
 que realiza a comunicação com as principais instituições
 bancárias. Mas é frequente um dos bancos alterar a Api deles
-e nosso código para de funcionar, derrubando o sistema para todo mundo. 😕 
+e nosso código para de funcionar, derrubando o sistema para todo mundo.😕
 """
 
 
