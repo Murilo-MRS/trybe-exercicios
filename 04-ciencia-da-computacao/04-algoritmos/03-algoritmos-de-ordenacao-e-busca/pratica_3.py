@@ -1,5 +1,5 @@
 from random import shuffle
-from Cronometro import Cronometro
+from cronometro import Cronometro
 
 
 def selection_sort(array):
