@@ -151,7 +151,7 @@ portanto sua Complexidade de tempo é O(n).
 O método insert_at realiza a inserção de um item em qualquer lugar da lista,
 portanto sua Complexidade de tempo é O(n).
 
-O método insert_last realiza a inserção de um item no final da lista, portanto 
+O método insert_last realiza a inserção de um item no final da lista, portanto
 ua Complexidade de tempo é O(1).
 
 O método remove_last realiza a remoção de um item do final da lista, portanto
