@@ -64,3 +64,49 @@ for key in double.keys():
 
 
 print(double)
+
+
+def intersection(list_a, list_b):
+    seen_in_a = {}
+
+    for item in list_a:
+        seen_in_a[item] = True
+
+    answer = []
+    for item in list_b:
+        if item in seen_in_a:
+            answer.append(item)
+
+    return answer
+
+
+lista1 = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+lista2 = [2, 4, 6, 8, 10, 12, 14, 16, 18]
+print(intersection(lista1, lista2))
+
+
+def screen(text):
+    screen_dict = {}
+
+    for char in text:
+        first_char = char[0]
+        if first_char not in screen_dict:
+            screen_dict[first_char] = [char]
+        else:
+            screen_dict[first_char].append(char)
+
+    return screen_dict
+
+
+text_list = [
+    "ana",
+    "maria",
+    "joana",
+    "mariana",
+    "joaquina",
+    "marcela",
+    "maristela",
+]
+# print(screen(text_list))
+for key, value in screen(text_list).items():
+    print(f"{key}: {value}")
