@@ -8,6 +8,12 @@ dicionario_de_notas = {
 }
 
 
-meu_primeiro_dataframe = pd.DataFrame(dicionario_de_notas)
+def calculate_status(nota):
+    return "Aprovado" if nota >= 7 else "Reprovado"
 
-print(meu_primeiro_dataframe)
+
+df = pd.DataFrame(dicionario_de_notas)
+df["mean"] = (df["primeira_nota"] + df["segunda_nota"]) / 2
+df["status"] = df["mean"].apply(calculate_status)
+
+print(df)
