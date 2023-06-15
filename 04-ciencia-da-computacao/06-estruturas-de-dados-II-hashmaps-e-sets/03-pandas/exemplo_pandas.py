@@ -17,3 +17,5 @@ df["mean"] = (df["primeira_nota"] + df["segunda_nota"]) / 2
 df["status"] = df["mean"].apply(calculate_status)
 
 print(df)
+print(df.describe())
+print(df.info())
